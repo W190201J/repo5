@@ -55,13 +55,13 @@ section {
     margin: 0 auto;
 }
 
-section ul:not(.inputElem) {
+section ul {
     padding-left: 95px;
     margin-bottom: 19px;
     overflow: hidden;
 }
 
-section ul li:not(.inputElem) {
+section ul li {
     float: left;
     width: 44px;
     margin-right: 28px;
@@ -112,4 +112,52 @@ button {
 
 button:hover {
     background-color: #538fbd;
+}
+
+.login-input-email ul {
+    padding-left: 0px;
+    margin-bottom: 0px;
+    overflow: hidden;
+}
+
+.login-input-email ul li {
+    width: 287px;
+    height: 48px;
+    background-color: white;
+    padding-left: 10px;
+    margin-right: 2px;
+    font-size: 14px;
+    /*line-height: 32px;*/
+    text-align: left;
+    color: #c0c0c0;
+    z-index: 99;
+    /*cursor: pointer;*/
+}
+
+.login-input-email ul li:hover {
+    background-color: #5d96c4;
+}
+
+.register-input-email ul {
+    padding-left: 0px;
+    margin-bottom: 0px;
+    overflow: hidden;
+}
+
+.register-input-email ul li {
+    width: 287px;
+    height: 48px;
+    background-color: white;
+    padding-left: 10px;
+    margin-right: 2px;
+    font-size: 14px;
+    /*line-height: 32px;*/
+    text-align: left;
+    color: #c0c0c0;
+    z-index: 99;
+    /*cursor: pointer;*/
+}
+
+.register-input-email ul li:hover {
+    background-color: #5d96c4;
 }
