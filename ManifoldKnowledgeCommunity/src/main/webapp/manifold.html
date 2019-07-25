@@ -1,27 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>导航栏</title>
+    <style type="text/css">
+        .nav {
+            width: 960px;
+            height: 60px;
+            border: 1px solid red;
+            margin: 100px auto;
+        }
+        
+        .nav ul li {
+            float: left;
+            background-color: #e7ffb0;
+        }
+        
+        .nav ul li a {
+            display: block;
+            width: 240px;
+            text-align: center;
+            line-height: 60px;
+            text-decoration: none;
+            color: #5a3467;
+        }
+    </style>
 </head>
+
 <body>
-<ul class="nav nav-tabs">
-
-</ul><br/>
-<form:form id="inputForm" modelAttribute="testCard" action="${ctx}/testCard/save" method="post" class="form-horizontal">
-
-    <div class="control-group">
-        <label class="control-label">卡号：</label>
-        <div class="controls">
-            <form:input path="cardNo" htmlEscape="false" maxlength="30" class="input-xlarge"   /><span style="font-style:oblique;color: #ff5500">&nbsp;&nbsp;&nbsp;&nbsp;提示：输入卡号可以进行模糊查询。</span>
-        </div>
-        <div class="box" id="box">
-            <ul   >
-
-            </ul>
-        </div>
+    <div class="nav">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
     </div>
-</form:form>
-
 </body>
+
 </html>
