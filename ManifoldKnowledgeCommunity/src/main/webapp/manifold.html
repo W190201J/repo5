@@ -1,10 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-welcome to manifold! 
+<ul class="nav nav-tabs">
+
+</ul><br/>
+<form:form id="inputForm" modelAttribute="testCard" action="${ctx}/testCard/save" method="post" class="form-horizontal">
+
+    <div class="control-group">
+        <label class="control-label">卡号：</label>
+        <div class="controls">
+            <form:input path="cardNo" htmlEscape="false" maxlength="30" class="input-xlarge"   /><span style="font-style:oblique;color: #ff5500">&nbsp;&nbsp;&nbsp;&nbsp;提示：输入卡号可以进行模糊查询。</span>
+        </div>
+        <div class="box" id="box">
+            <ul   >
+
+            </ul>
+        </div>
+    </div>
+</form:form>
+
 </body>
 </html>
