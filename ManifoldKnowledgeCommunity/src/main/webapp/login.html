@@ -57,9 +57,11 @@
 
 <body>
     <!--<canvas id="c"></canvas>-->
+
     <div id="WebGL-output"></div>
     <div id="Stats-output"></div>
     <div class="wrap ">
+
         <header>
             <h1>流形</h1>
             <h5>开放、专业的知识共享社区</h5>
@@ -75,7 +77,12 @@
                 <form id="registerForm ">
                     <div class="inputs ">
                         <input type="text " name="username " id="registerInputUsername " placeholder="姓名 " autocomplete="off">
-                        <input class="inputElem" type="text " name="email " id="registerInputEmail " placeholder="邮箱 " autocomplete="off">
+                        <div class="register-input-email">
+                            <input class="inputElem" type="text" name="email" id="registerInputEmail" placeholder="邮箱 " required autofocus autocomplete="off" onkeyup="autoCompleteEmail('register-input-email','register-complete-email','registerInputEmail')">
+                            <ul id="register-complete-email">
+
+                            </ul>
+                        </div>
                         <input type="password" name="password " id="registerInputPassword " placeholder="密码（不少于6位） " autocomplete="new-password">
                         <input type="password" name="password-confirm " id="registerInputPassword-confirm  " placeholder="确认密码" autocomplete="new-password">
                         <span id="regi-username-error "></span>
@@ -95,8 +102,11 @@
             <div>
                 <form id="loginForm ">
                     <div class="inputs ">
-                        <div class="parentCls">
-                            <input class="inputElem" type="text" name="email " id="loginInputEmail " placeholder="邮箱" required autofocus autocomplete="off" onkeyup="autoCompleteEmail()">
+                        <div class="login-input-email">
+                            <input class="inputElem" type="text" name="email" id="loginInputEmail" placeholder="邮箱" required autofocus autocomplete="off" onkeyup="autoCompleteEmail('login-input-email','login-complete-email','loginInputEmail')">
+                            <ul id="login-complete-email">
+
+                            </ul>
                         </div>
                         <input type="password" name="password " id="loginInputPassword " placeholder="密码 " autocomplete="new-password">
                         <span id="login-email-error "></span>
