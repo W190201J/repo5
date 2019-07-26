@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>流形--专业、开放的知识分享社区</title>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/jpeg" href="image/manifold-logo5.jpg" />
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/mask.css">
+    <link rel="stylesheet" type="text/css" href="css/topic.css">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <canvas id="canvas"></canvas>
+    <div class="top-menu-nav">
+        <div class="topnav">
+            <center>
+                <a href="#home"><i class="fa fa-tv fa-1g"></i>&nbsp;&nbsp;主页</a>
+                <a href="#about"><i class="fa fa-tree fa-1g"></i>&nbsp;&nbsp;话题树</a>
+                <a href="#contact"><i class="fa fa-twitch fa-1g"></i>&nbsp;&nbsp;发现</a>&nbsp;&nbsp;
+                <input type="text" placeholder="搜索..">
+                <button><i class="fa fa-search fa-1g"></i>&nbsp;search</button>
+            </center>
+        </div>
+    </div>
+
+
+    <div class="right-foot">
+        <div class="menu">
+            <li class="item" id="profile">
+                <a href="#profile" class="btn"><i class="fa fa-user"></i>Profile</a>
+                <div class="smenu">
+                    <a href="#">Posts</a>
+                    <a href="#">Picture</a>
+                </div>
+            </li>
+            <li class="item" id="message">
+                <a href="#message" class="btn"><i class="fa fa-envelope"></i>Message</a>
+                <div class="smenu">
+                    <a href="#">new</a>
+                    <a href="#">Sent</a>
+                    <a href="#">Spam</a>
+                </div>
+            </li>
+            <li class="item" id="setting">
+                <a href="#setting" class="btn"><i class="fa fa-cog"></i>Setting</a>
+                <div class="smenu">
+                    <a href="#">Password</a>
+                    <a href="#">Language</a>
+                </div>
+            </li>
+            <li class="item" id="Logout">
+                <a href="#Logout" class="btn"><i class="fa fa-sign-out"></i>Logout</a>
+            </li>
+        </div>
+    </div>
+
+    <div class="topic-container">
+        <div class="header">
+            <h4><a href="#" class="color259">热门排序</a><span> | </span><a href="#">时间排序</a></h4>
+        </div>
+        <div class="feed-list">
+            <div class="feed-item">
+                <div class="feed-body">
+                    <h2 class="feed-title">
+                        <a href="#">为什么业内不流行基于移动端的Web APP去使用H5整站 canvas技术？</a>
+                    </h2>
+                    <div class="feed-user-info">
+                        <a href="#">与三更</a>
+                        <span class="comma">，</span>
+                        <span>你是春天里的花朵，长在</span>
+                    </div>
+                    <div class="feed-content">
+                        人家发明 html 和 css 本来就是为了让你尽量不要自绘，因为这事儿开发成本太高，为了解决特殊需求，人家又给你提供了 canvas。 现在你要摒弃 html/css，没有特殊需求却非要在 canvas 自绘。是不是回头你觉得自绘开发效率低，又要在 canvas 里重新发明一套 h…
+                        <a href="#">显示全部</a>
+                    </div>
+                    <div class="feed-meta">
+                        <a href="#"><span class="glyphicon glyphicon-plus"></span>&nbsp;关注问题</a>
+                        <a href="#"><span class="glyphicon glyphicon-leaf"></span>&nbsp;2条评论</a>
+                        <div class="hidden-part" style="display: none;">
+                            <a href="#"><span class="glyphicon glyphicon-heart"></span>&nbsp;感谢</a>
+                            <a href="#"><span class="glyphicon glyphicon-share-alt"></span>&nbsp;分享</a>
+                            <a href="#"><span class="glyphicon glyphicon-bookmark"></span>&nbsp;收藏</a>
+                            <a href="#"><span>•</span>&nbsp;举报</a>
+                        </div>
+                        <a href="#">作者保留权利</a>
+                    </div>
+                </div>
+                <div class="votebar">
+                    <button class="vote-up" clicked="false">26
+								<i></i>
+							</button>
+                    <button class="vote-down" clicked="false">
+								<i></i>
+							</button>
+                </div>
+            </div>
+            <div class="feed-item">
+                <div class="feed-body">
+                    <h2 class="feed-title">
+                        <a href="#">为什么业内不流行基于移动端的Web APP去使用H5整站 canvas技术？</a>
+                    </h2>
+                    <div class="feed-user-info">
+                        <a href="#">与三更</a>
+                        <span class="comma">，</span>
+                        <span>你是春天里的花朵，长在</span>
+                    </div>
+                    <div class="feed-content">
+                        人家发明 html 和 css 本来就是为了让你尽量不要自绘，因为这事儿开发成本太高，为了解决特殊需求，人家又给你提供了 canvas。 现在你要摒弃 html/css，没有特殊需求却非要在 canvas 自绘。是不是回头你觉得自绘开发效率低，又要在 canvas 里重新发明一套 h…
+                        <a href="#">显示全部</a>
+                    </div>
+                    <div class="feed-meta">
+                        <a href="#"><span class="glyphicon glyphicon-plus"></span>&nbsp;关注问题</a>
+                        <a href="#"><span class="glyphicon glyphicon-leaf"></span>&nbsp;2条评论</a>
+                        <div class="hidden-part" style="display: none;">
+                            <a href="#"><span class="glyphicon glyphicon-heart"></span>&nbsp;感谢</a>
+                            <a href="#"><span class="glyphicon glyphicon-share-alt"></span>&nbsp;分享</a>
+                            <a href="#"><span class="glyphicon glyphicon-bookmark"></span>&nbsp;收藏</a>
+                            <a href="#"><span>•</span>&nbsp;举报</a>
+                        </div>
+                        <a href="#">作者保留权利</a>
+                    </div>
+                </div>
+                <div class="votebar">
+                    <button class="vote-up" clicked="false">26
+								<i></i>
+							</button>
+                    <button class="vote-down" clicked="false">
+								<i></i>
+							</button>
+                </div>
+            </div>
+            <div class="feed-item">
+                <div class="feed-body">
+                    <h2 class="feed-title">
+                        <a href="#">为什么业内不流行基于移动端的Web APP去使用H5整站 canvas技术？</a>
+                    </h2>
+                    <div class="feed-user-info">
+                        <a href="#">与三更</a>
+                        <span class="comma">，</span>
+                        <span>你是春天里的花朵，长在</span>
+                    </div>
+                    <div class="feed-content">
+                        人家发明 html 和 css 本来就是为了让你尽量不要自绘，因为这事儿开发成本太高，为了解决特殊需求，人家又给你提供了 canvas。 现在你要摒弃 html/css，没有特殊需求却非要在 canvas 自绘。是不是回头你觉得自绘开发效率低，又要在 canvas 里重新发明一套 h…
+                        <a href="#">显示全部</a>
+                    </div>
+                    <div class="feed-meta">
+                        <a href="#"><span class="glyphicon glyphicon-plus"></span>&nbsp;关注问题</a>
+                        <a href="#"><span class="glyphicon glyphicon-leaf"></span>&nbsp;2条评论</a>
+                        <div class="hidden-part" style="display: none;">
+                            <a href="#"><span class="glyphicon glyphicon-heart"></span>&nbsp;感谢</a>
+                            <a href="#"><span class="glyphicon glyphicon-share-alt"></span>&nbsp;分享</a>
+                            <a href="#"><span class="glyphicon glyphicon-bookmark"></span>&nbsp;收藏</a>
+                            <a href="#"><span>•</span>&nbsp;举报</a>
+                        </div>
+                        <a href="#">作者保留权利</a>
+                    </div>
+                </div>
+                <div class="votebar">
+                    <button class="vote-up" clicked="false">26
+								<i></i>
+							</button>
+                    <button class="vote-down" clicked="false">
+								<i></i>
+							</button>
+                </div>
+            </div>
+            <div class="feed-item">
+                <div class="feed-body">
+                    <h2 class="feed-title">
+                        <a href="#">为什么业内不流行基于移动端的Web APP去使用H5整站 canvas技术？</a>
+                    </h2>
+                    <div class="feed-user-info">
+                        <a href="#">与三更</a>
+                        <span class="comma">，</span>
+                        <span>你是春天里的花朵，长在</span>
+                    </div>
+                    <div class="feed-content">
+                        人家发明 html 和 css 本来就是为了让你尽量不要自绘，因为这事儿开发成本太高，为了解决特殊需求，人家又给你提供了 canvas。 现在你要摒弃 html/css，没有特殊需求却非要在 canvas 自绘。是不是回头你觉得自绘开发效率低，又要在 canvas 里重新发明一套 h…
+                        <a href="#">显示全部</a>
+                    </div>
+                    <div class="feed-meta">
+                        <a href="#"><span class="glyphicon glyphicon-plus"></span>&nbsp;关注问题</a>
+                        <a href="#"><span class="glyphicon glyphicon-leaf"></span>&nbsp;2条评论</a>
+                        <div class="hidden-part" style="display: none;">
+                            <a href="#"><span class="glyphicon glyphicon-heart"></span>&nbsp;感谢</a>
+                            <a href="#"><span class="glyphicon glyphicon-share-alt"></span>&nbsp;分享</a>
+                            <a href="#"><span class="glyphicon glyphicon-bookmark"></span>&nbsp;收藏</a>
+                            <a href="#"><span>•</span>&nbsp;举报</a>
+                        </div>
+                        <a href="#">作者保留权利</a>
+                    </div>
+                </div>
+                <div class="votebar">
+                    <button class="vote-up" clicked="false">26
+								<i></i>
+							</button>
+                    <button class="vote-down" clicked="false">
+								<i></i>
+							</button>
+                </div>
+            </div>
+            <div class="feed-item">
+                <div class="feed-body">
+                    <h2 class="feed-title">
+                        <a href="#">为什么业内不流行基于移动端的Web APP去使用H5整站 canvas技术？</a>
+                    </h2>
+                    <div class="feed-user-info">
+                        <a href="#">与三更</a>
+                        <span class="comma">，</span>
+                        <span>你是春天里的花朵，长在</span>
+                    </div>
+                    <div class="feed-content">
+                        人家发明 html 和 css 本来就是为了让你尽量不要自绘，因为这事儿开发成本太高，为了解决特殊需求，人家又给你提供了 canvas。 现在你要摒弃 html/css，没有特殊需求却非要在 canvas 自绘。是不是回头你觉得自绘开发效率低，又要在 canvas 里重新发明一套 h…
+                        <a href="#">显示全部</a>
+                    </div>
+                    <div class="feed-meta">
+                        <a href="#"><span class="glyphicon glyphicon-plus"></span>&nbsp;关注问题</a>
+                        <a href="#"><span class="glyphicon glyphicon-leaf"></span>&nbsp;2条评论</a>
+                        <div class="hidden-part" style="display: none;">
+                            <a href="#"><span class="glyphicon glyphicon-heart"></span>&nbsp;感谢</a>
+                            <a href="#"><span class="glyphicon glyphicon-share-alt"></span>&nbsp;分享</a>
+                            <a href="#"><span class="glyphicon glyphicon-bookmark"></span>&nbsp;收藏</a>
+                            <a href="#"><span>•</span>&nbsp;举报</a>
+                        </div>
+                        <a href="#">作者保留权利</a>
+                    </div>
+                </div>
+                <div class="votebar">
+                    <button class="vote-up" clicked="false">26
+								<i></i>
+							</button>
+                    <button class="vote-down" clicked="false">
+								<i></i>
+							</button>
+                </div>
+            </div>
+            <div class="feed-item">
+                <div class="feed-body">
+                    <h2 class="feed-title">
+                        <a href="#">为什么业内不流行基于移动端的Web APP去使用H5整站 canvas技术？</a>
+                    </h2>
+                    <div class="feed-user-info">
+                        <a href="#">与三更</a>
+                        <span class="comma">，</span>
+                        <span>你是春天里的花朵，长在</span>
+                    </div>
+                    <div class="feed-content">
+                        人家发明 html 和 css 本来就是为了让你尽量不要自绘，因为这事儿开发成本太高，为了解决特殊需求，人家又给你提供了 canvas。 现在你要摒弃 html/css，没有特殊需求却非要在 canvas 自绘。是不是回头你觉得自绘开发效率低，又要在 canvas 里重新发明一套 h…
+                        <a href="#">显示全部</a>
+                    </div>
+                    <div class="feed-meta">
+                        <a href="#"><span class="glyphicon glyphicon-plus"></span>&nbsp;关注问题</a>
+                        <a href="#"><span class="glyphicon glyphicon-leaf"></span>&nbsp;2条评论</a>
+                        <div class="hidden-part" style="display: none;">
+                            <a href="#"><span class="glyphicon glyphicon-heart"></span>&nbsp;感谢</a>
+                            <a href="#"><span class="glyphicon glyphicon-share-alt"></span>&nbsp;分享</a>
+                            <a href="#"><span class="glyphicon glyphicon-bookmark"></span>&nbsp;收藏</a>
+                            <a href="#"><span>•</span>&nbsp;举报</a>
+                        </div>
+                        <a href="#">作者保留权利</a>
+                    </div>
+                </div>
+                <div class="votebar">
+                    <button class="vote-up" clicked="false">26
+								<i></i>
+							</button>
+                    <button class="vote-down" clicked="false">
+								<i></i>
+							</button>
+                </div>
+            </div>
+            <div class="feed-item">
+                <div class="feed-body">
+                    <h2 class="feed-title">
+                        <a href="#">为什么业内不流行基于移动端的Web APP去使用H5整站 canvas技术？</a>
+                    </h2>
+                    <div class="feed-user-info">
+                        <a href="#">与三更</a>
+                        <span class="comma">，</span>
+                        <span>你是春天里的花朵，长在</span>
+                    </div>
+                    <div class="feed-content">
+                        人家发明 html 和 css 本来就是为了让你尽量不要自绘，因为这事儿开发成本太高，为了解决特殊需求，人家又给你提供了 canvas。 现在你要摒弃 html/css，没有特殊需求却非要在 canvas 自绘。是不是回头你觉得自绘开发效率低，又要在 canvas 里重新发明一套 h…
+                        <a href="#">显示全部</a>
+                    </div>
+                    <div class="feed-meta">
+                        <a href="#"><span class="glyphicon glyphicon-plus"></span>&nbsp;关注问题</a>
+                        <a href="#"><span class="glyphicon glyphicon-leaf"></span>&nbsp;2条评论</a>
+                        <div class="hidden-part" style="display: none;">
+                            <a href="#"><span class="glyphicon glyphicon-heart"></span>&nbsp;感谢</a>
+                            <a href="#"><span class="glyphicon glyphicon-share-alt"></span>&nbsp;分享</a>
+                            <a href="#"><span class="glyphicon glyphicon-bookmark"></span>&nbsp;收藏</a>
+                            <a href="#"><span>•</span>&nbsp;举报</a>
+                        </div>
+                        <a href="#">作者保留权利</a>
+                    </div>
+                </div>
+                <div class="votebar">
+                    <button class="vote-up" clicked="false">26
+								<i></i>
+							</button>
+                    <button class="vote-down" clicked="false">
+								<i></i>
+							</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript " src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript " src="js/manifold.js"></script>
+
+</html>
