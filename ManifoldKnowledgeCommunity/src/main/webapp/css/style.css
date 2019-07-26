@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+
+/*顶部导航菜单*/
+
+.top-menu-nav {
+    width: 100%;
+    height: 7%;
+    position: fixed;
+    background: #333;
+    top: 0%;
+    z-index: 99;
+}
+
+
+/* 在顶部导航栏中添加黑色背景颜色 */
+
+.topnav {
+    width: 100%;
+    height: 7%;
+    position: absolute;
+    background-color: #333;
+    top: 0%;
+    z-index: 1;
+}
+
+
+/* 设置导航栏的链接样式 */
+
+.topnav a {
+    display: inline-block;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: sans-serif;
+    text-align: center;
+    padding: 5px 2%;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav button {
+    display: inline-block;
+    border: none;
+    border-radius: 3px;
+    color: #333;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: sans-serif;
+    text-align: center;
+    padding: 5px 1%;
+    text-decoration: none;
+    font-size: 17px;
+    background: #c5c5c5;
+}
+
+.topnav button:hover {
+    background: #195277;
+    color: #fff;
+}
+
+
+/* 在悬停时更改链接的颜色 */
+
+.topnav a:hover {
+    background-color: #3498db;
+    color: #fff;
+}
+
+
+/* 突出显示当前选中的元素 */
+
+.topnav a.active {
+    background-color: rgba(0, 45, 82, 75);
+    color: white;
+}
+
+
+/* 设置导航栏的搜索框样式 */
+
+.topnav input[type=text] {
+    width: 225px;
+    height: 19px;
+    padding: 6px;
+    border: none;
+    border-radius: 3px;
+    margin-top: 10px;
+    margin-right: 20px;
+    font-size: 14px;
+    background: rgba(250, 245, 245, 75);
+}
+
+
+/*右下角导航菜单*/
+
+.right-foot {
+    position: fixed;
+    bottom: -10%;
+    right: -7%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+}
+
+.menu {
+    width: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.item {
+    border-top: 1px solid #2980b9;
+    overflow: hidden;
+}
+
+.btn {
+    display: block;
+    padding: 16px 20px;
+    background: #3498db;
+    color: white;
+    position: relative;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #3498db;
+    left: 20px;
+    bottom: -7px;
+    transform: rotate(45deg);
+}
+
+.btn i {
+    margin-right: 10px;
+}
+
+.smenu {
+    background: #333;
+    overflow: hidden;
+    transition: max-height 0.3s;
+    max-height: 0;
+}
+
+.smenu a {
+    display: block;
+    padding: 16px;
+    color: white;
+    font-size: 14px;
+    margin: 4px 0;
+    position: relative;
+}
+
+.smenu a::before {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background: #3498db;
+    left: 0;
+    top: 0;
+    transition: 0.3;
+    opacity: 0;
+}
+
+.smenu a:hover::before {
+    opacity: 1;
+}
+
+.item:target .smenu {
+    max-height: 10em;
+}
+
+
+/*话题容器*/
+
+.topic-container {
+    width: 600px;
+    top: 20%;
+    left: 15%;
+    padding: 5px 10px;
+    position: absolute;
+    display: inline-block;
+}
