@@ -16,4 +16,14 @@ public class UserServiceImpl implements IUserService {
     public User queryByEmailPsw(String email, String password) {
         return userMapper.queryByEmailPsw(email, password);
     }
+
+    @Override
+    public Integer activation(String email) {
+        return userMapper.activation(email);
+    }
+
+    @Override
+    public Integer addUser(User user) {
+        return userMapper.insert(user);
+    }
 }

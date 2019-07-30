@@ -29,7 +29,15 @@
     </resultMap>
 
     <select id="queryByEmailPsw" resultMap="userMap">
-        select * from user_table where email=#{email} and password=#{password}
+        select * from user_table where email=#{email} and password=#{password};
     </select>
+
+    <insert id="insert" parameterType="User">
+        insert into user_table(email,password,username,join_time) values(#{email},#{password},#{username},#{joinTime});
+    </insert>
+
+    <update id="activation" parameterType="java.lang.String">
+        update user_table set status=1 where email=#{email};
+    </update>
 
 </mapper>
