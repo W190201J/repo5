@@ -1,4 +1,4 @@
-package com.wander.manifold.utils;
+package com.wander.core.utils;
 
 import com.sun.mail.util.MailSSLSocketFactory;
 

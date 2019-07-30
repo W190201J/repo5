@@ -1,4 +1,4 @@
-package com.wander.manifold.config;
+package com.wander.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

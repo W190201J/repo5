@@ -1,9 +1,12 @@
 package com.wander.manifold.controller;
 
+import com.wander.core.utils.JwtTokenUtil;
 import com.wander.manifold.pojo.User;
 import com.wander.manifold.service.IUserService;
-import com.wander.manifold.utils.KemingCodeUtil;
-import com.wander.manifold.utils.MailUtil;
+import com.wander.core.utils.KemingCodeUtil;
+import com.wander.core.utils.MailUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -27,7 +30,7 @@ public class UserController {
     @Autowired
     private RedisTemplate<String, Object> redisTemplate;
 
-    //keming加密-密钥
+    //keming加密服务-密钥
     @Value("${keming.secretKey}")
     private String kmSecretKey;
 
@@ -35,8 +38,16 @@ public class UserController {
     @Resource(name = "userService")
     private IUserService userService;
 
+    //token服务
+    @Autowired
+    private JwtTokenUtil jwtTokenUtil;
+
+    //日志
+    private static final Logger log = LoggerFactory.getLogger(UserController.class);
+
     /**
      * 登录
+     *
      * @param email
      * @param password
      * @return
@@ -44,15 +55,20 @@ public class UserController {
     @GetMapping("/user")
     public ResponseEntity<?> login(String email, String password) {
         User user = userService.queryByEmailPsw(email, password);
-        if(user.getStatus()==1){
-            return new ResponseEntity<User>(user, HttpStatus.OK);
-        }else{
+        if (user != null && user.getStatus() == 1) {
+            String token = jwtTokenUtil.createJwt(user);
+            log.info("用户" + email + "生成的token信息:{}", token);
+            return new ResponseEntity<String>(token, HttpStatus.OK);
+        } else if(user != null && user.getStatus() == 0) {
             return new ResponseEntity<Integer>(0, HttpStatus.UNAUTHORIZED);
+        }else{
+            return new ResponseEntity<Integer>(1, HttpStatus.UNAUTHORIZED);
         }
     }
 
     /**
      * 注册
+     *
      * @param email
      * @param username
      * @param password
@@ -68,11 +84,11 @@ public class UserController {
 
         //生成随机数
         String userCode = String.valueOf((int) (Math.random() * 100000));
-        //保存激活码到Redis，有效时间30分钟
+        //保存激活码到Redis，有效时间30分钟--测试阶段设置为3分钟
         ValueOperations<String, Object> value = redisTemplate.opsForValue();
-        value.set(user.getEmail(), userCode, 5, TimeUnit.MINUTES);
-        //user对象暂时保存到Redis，失效时间30分钟
-        value.set(user.getEmail() + "_info", user, 5, TimeUnit.MINUTES);
+        value.set(user.getEmail(), userCode, 3, TimeUnit.MINUTES);
+        //user对象暂时保存到Redis，失效时间30分钟--测试阶段设置为3分钟
+        value.set(user.getEmail() + "_info", user, 3, TimeUnit.MINUTES);
 
         String activationCode = KemingCodeUtil.encode(user.getEmail() + "#div#" + userCode, kmSecretKey);
 

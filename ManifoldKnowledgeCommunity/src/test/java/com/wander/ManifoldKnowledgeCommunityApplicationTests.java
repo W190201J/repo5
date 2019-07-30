@@ -1,7 +1,6 @@
 package com.wander;
 
-import com.wander.manifold.utils.KemingCodeUtil;
-import com.wander.manifold.utils.MailUtil;
+import com.wander.core.utils.KemingCodeUtil;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;

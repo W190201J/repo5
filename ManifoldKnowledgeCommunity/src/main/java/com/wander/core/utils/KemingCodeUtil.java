@@ -1,4 +1,4 @@
-package com.wander.manifold.utils;
+package com.wander.core.utils;
 
 /**
  * 加密工具类

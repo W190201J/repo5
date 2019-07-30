@@ -2,7 +2,7 @@ package com.wander.manifold.controller;
 
 import com.wander.manifold.pojo.User;
 import com.wander.manifold.service.IUserService;
-import com.wander.manifold.utils.KemingCodeUtil;
+import com.wander.core.utils.KemingCodeUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -30,6 +30,7 @@ public class UserActivationController {
 
     @GetMapping("/activation")
     public String activation(String code) {
+        //解密
         String str = KemingCodeUtil.decode(code, kmSecretKey);
         String[] strArr = str.split("#div#");
         String email = strArr[0];

@@ -52,7 +52,7 @@
                 </div>
             </li>
             <li class="item" id="Logout">
-                <a href="#Logout" class="btn"><i class="fa fa-sign-out"></i>Logout</a>
+                <a href="javascript:logout();" class="btn"><i class="fa fa-sign-out"></i>Logout</a>
             </li>
         </div>
     </div>
@@ -309,8 +309,22 @@
             </div>
         </div>
     </div>
+    <!--基础js-->
+    <script type="text/javascript " src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript " src="layer/2.4/layer.js"></script>
+    <script type="text/javascript " src="js/manifold.js"></script>
+
+    <!--token服务-->
+    <script type="text/javascript " src="js/jwt.js"></script>
+    <script>
+        function logout() {
+            layer.confirm("确定要退出吗", () => {
+                removeJwtToken();
+                window.location.href = "login.html";
+            })
+        }
+    </script>
+
 </body>
-<script type="text/javascript " src="js/jquery-3.3.1.min.js"></script>
-<script type="text/javascript " src="js/manifold.js"></script>
 
 </html>
