@@ -110,6 +110,18 @@ button {
     cursor: pointer;
 }
 
+#loginButton {
+    width: 300px;
+    height: 43px;
+    line-height: 43px;
+    border-radius: 3px;
+    text-align: center;
+    background-color: #003a69;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
 button:hover {
     background-color: #538fbd;
 }

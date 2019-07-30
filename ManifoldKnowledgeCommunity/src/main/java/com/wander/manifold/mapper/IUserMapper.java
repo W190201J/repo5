@@ -6,6 +6,10 @@ import org.springframework.stereotype.Repository;
 @Repository("userMapper")
 public interface IUserMapper {
 
-    public User queryByEmailPsw(String email, String password);
+    User queryByEmailPsw(String email, String password);
+
+    Integer activation(String email);
+
+    Integer insert(User user);
 
 }
