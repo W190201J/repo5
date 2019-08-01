@@ -18,7 +18,7 @@
         <div class="topnav">
             <center>
                 <a id="home-page" href="#home"><i class="fa fa-tv fa-1g"></i>&nbsp;&nbsp;主页</a>
-                <a id="topic-tree" href="manifold-topic.html"><i class="fa fa-tree fa-1g"></i>&nbsp;&nbsp;话题树</a>
+                <a id="topic-tree" href="topic-tree.html"><i class="fa fa-tree fa-1g"></i>&nbsp;&nbsp;话题树</a>
                 <a id="discover-page" href="#contact"><i class="fa fa-twitch fa-1g"></i>&nbsp;&nbsp;发现</a>&nbsp;&nbsp;
                 <input type="text" placeholder="搜索 问题/话题/用户..">
                 <button id="search-btn"><i class="fa fa-search fa-lg"></i>&nbsp;search</button>
@@ -28,7 +28,7 @@
 
     <div class="right-top">
         <li>
-            <a href="#">
+            <a href="question-edit.html">
                 <i class="fa fa-lightbulb-o fa-2x"></i>
                 <div>
                     我要提问
@@ -328,11 +328,19 @@
             </div>
         </div>
     </div>
+
     <!--基础js-->
     <script type="text/javascript " src="js/jquery-3.3.1.min.js"></script>
+    <!--layer-->
     <script type="text/javascript " src="layer/2.4/layer.js"></script>
+    <!--layui-->
+    <script type="text/javascript" src="layui/layui.js"></script>
+    <!--页面-->
     <script type="text/javascript " src="js/manifold.js"></script>
-
+    <!--token服务-->
+    <script type="text/javascript " src="js/jwt.js"></script>
+    <!--话题树-->
+    <script type="text/javascript " src="js/manifold-topic.js"></script>
     <!--token服务-->
     <script type="text/javascript " src="js/jwt.js"></script>
     <script>
