@@ -1,0 +1,12 @@
+body {
+    background: rgba(56, 52, 52, 0.75);
+}
+
+.question-editor-container {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 50%;
+    color: #fff;
+}

@@ -7,7 +7,7 @@
 }
 
 
-/*顶部导航菜单*/
+/*-------------------------------------------顶部导航菜单---------------------------------------------*/
 
 .top-menu-nav {
     width: 100%;
@@ -98,12 +98,50 @@
 }
 
 
-/*右下角导航菜单*/
+/*-------------------------------------我要提问-------------------------------------*/
+
+.right-top {
+    position: fixed;
+    top: 20%;
+    right: 5%;
+    width: 300px;
+    height: 120px;
+    border-radius: 25px;
+    transform: translate(-50%, -50%);
+    background: rgba(210, 210, 210, 0.55);
+}
+
+.right-top li {
+    float: left;
+    width: 120px;
+    height: 90px;
+    background: rgb(250, 250, 250);
+    margin: 15px 15px;
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.right-top li a i {
+    margin: 10px 50px;
+}
+
+.right-top li a {
+    color: rgb(75, 75, 75);
+}
+
+.right-top li a:hover {
+    color: #2980b9;
+}
+
+
+/*----------------------------------------右下角导航菜单-----------------------------------------*/
 
 .right-foot {
     position: fixed;
     bottom: -10%;
-    right: -7%;
+    right: 5%;
     transform: translate(-50%, -50%);
     display: inline-block;
 }
@@ -179,9 +217,9 @@
 }
 
 
-/*话题容器*/
+/*--------------------------------------问题容器--------------------------------------*/
 
-.topic-container {
+.question-container {
     width: 600px;
     top: 20%;
     left: 15%;

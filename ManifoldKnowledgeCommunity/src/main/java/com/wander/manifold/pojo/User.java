@@ -1,5 +1,8 @@
 package com.wander.manifold.pojo;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.io.Serializable;
 import java.util.Date;
 
@@ -11,6 +14,8 @@ public class User implements Serializable {
     private String password;
     private String username;
     private Integer status;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @JsonFormat(pattern = "yyyy-MM-dd")
     private Date joinTime;
     private Integer gender;
     private String phone;
