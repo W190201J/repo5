@@ -17,27 +17,45 @@
     <div class="top-menu-nav">
         <div class="topnav">
             <center>
-                <a href="#home"><i class="fa fa-tv fa-1g"></i>&nbsp;&nbsp;主页</a>
-                <a href="#about"><i class="fa fa-tree fa-1g"></i>&nbsp;&nbsp;话题树</a>
-                <a href="#contact"><i class="fa fa-twitch fa-1g"></i>&nbsp;&nbsp;发现</a>&nbsp;&nbsp;
-                <input type="text" placeholder="搜索..">
-                <button><i class="fa fa-search fa-1g"></i>&nbsp;search</button>
+                <a id="home-page" href="#home"><i class="fa fa-tv fa-1g"></i>&nbsp;&nbsp;主页</a>
+                <a id="topic-tree" href="topic-tree.html"><i class="fa fa-tree fa-1g"></i>&nbsp;&nbsp;话题树</a>
+                <a id="discover-page" href="#contact"><i class="fa fa-twitch fa-1g"></i>&nbsp;&nbsp;发现</a>&nbsp;&nbsp;
+                <input type="text" placeholder="搜索 问题/话题/用户..">
+                <button id="search-btn"><i class="fa fa-search fa-lg"></i>&nbsp;search</button>
             </center>
         </div>
     </div>
 
+    <div class="right-top">
+        <li>
+            <a href="question-edit.html">
+                <i class="fa fa-lightbulb-o fa-2x"></i>
+                <div>
+                    我要提问
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa fa-bookmark-o fa-2x"></i>
+                <div>
+                    我的收藏
+                </div>
+            </a>
+        </li>
+    </div>
 
     <div class="right-foot">
         <div class="menu">
             <li class="item" id="profile">
-                <a href="#profile" class="btn"><i class="fa fa-user"></i>Profile</a>
+                <a href="#profile" class="btn"><i class="fa fa-user"></i>用户名</a>
                 <div class="smenu">
-                    <a href="#">Posts</a>
+                    <a href="#">个人资料</a>
                     <a href="#">Picture</a>
                 </div>
             </li>
             <li class="item" id="message">
-                <a href="#message" class="btn"><i class="fa fa-envelope"></i>Message</a>
+                <a href="#message" class="btn"><i class="fa fa-envelope"></i>消息</a>
                 <div class="smenu">
                     <a href="#">new</a>
                     <a href="#">Sent</a>
@@ -57,7 +75,8 @@
         </div>
     </div>
 
-    <div class="topic-container">
+
+    <div class="question-container">
         <div class="header">
             <h4><a href="#" class="color259">热门排序</a><span> | </span><a href="#">时间排序</a></h4>
         </div>
@@ -309,11 +328,19 @@
             </div>
         </div>
     </div>
+
     <!--基础js-->
     <script type="text/javascript " src="js/jquery-3.3.1.min.js"></script>
+    <!--layer-->
     <script type="text/javascript " src="layer/2.4/layer.js"></script>
+    <!--layui-->
+    <script type="text/javascript" src="layui/layui.js"></script>
+    <!--页面-->
     <script type="text/javascript " src="js/manifold.js"></script>
-
+    <!--token服务-->
+    <script type="text/javascript " src="js/jwt.js"></script>
+    <!--话题树-->
+    <script type="text/javascript " src="js/manifold-topic.js"></script>
     <!--token服务-->
     <script type="text/javascript " src="js/jwt.js"></script>
     <script>

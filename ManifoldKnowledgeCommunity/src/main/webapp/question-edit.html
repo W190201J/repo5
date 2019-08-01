@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>流形--专业、开放的知识分享社区</title>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/jpeg" href="image/manifold-logo5.jpg" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/question-editor.css">
+</head>
+
+<body>
+    <div class="question-editor-container">
+        <h2>具体描述</h2>
+        <textarea name="content" id="question-content-editor">
+               
+        </textarea>
+    </div>
+
+
+    <!--基础js-->
+    <script type="text/javascript " src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript " src="layer/2.4/layer.js"></script>
+
+    <!--富文本-->
+    <script src="ckeditor5-build-classic-master/build/ckeditor.js"></script>
+    <script>
+        ClassicEditor
+            .create(document.querySelector('#question-content-editor'))
+            .catch(error => {
+                console.error(error);
+            });
+    </script>
+</body>
+
+</html>

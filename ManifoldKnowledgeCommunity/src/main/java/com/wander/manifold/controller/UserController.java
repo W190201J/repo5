@@ -60,9 +60,9 @@ public class UserController {
             log.info("用户" + email + "生成的token信息:{}", token);
             return new ResponseEntity<String>(token, HttpStatus.OK);
         } else if(user != null && user.getStatus() == 0) {
-            return new ResponseEntity<Integer>(0, HttpStatus.UNAUTHORIZED);
+            return new ResponseEntity<Integer>(0, HttpStatus.OK);
         }else{
-            return new ResponseEntity<Integer>(1, HttpStatus.UNAUTHORIZED);
+            return new ResponseEntity<Integer>(1, HttpStatus.OK);
         }
     }
 
