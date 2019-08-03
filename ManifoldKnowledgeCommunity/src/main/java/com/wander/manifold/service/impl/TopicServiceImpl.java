@@ -37,4 +37,9 @@ public class TopicServiceImpl implements ITopicService {
     public Integer addTopic(Topic topic) {
         return topicMapper.insert(topic);
     }
+
+    @Override
+    public List<Topic> queryTopicByKeyword(String keyword) {
+        return topicMapper.queryTopicByKeyword("%"+keyword+"%");
+    }
 }

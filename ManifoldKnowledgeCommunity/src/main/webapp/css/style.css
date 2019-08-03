@@ -90,7 +90,7 @@
     height: 19px;
     padding: 6px;
     border: none;
-    border-radius: 3px;
+    border-radius: 5px;
     margin-top: 10px;
     margin-right: 20px;
     font-size: 14px;
@@ -140,7 +140,7 @@
 
 .right-foot {
     position: fixed;
-    bottom: -10%;
+    bottom: -12%;
     right: 5%;
     transform: translate(-50%, -50%);
     display: inline-block;
@@ -214,6 +214,15 @@
 
 .item:target .smenu {
     max-height: 10em;
+}
+
+#username img {
+    margin: 0px 15px;
+    width: 39px;
+    height: 39px;
+    border: none;
+    object-fit: cover;
+    display: inline-block;
 }
 
 

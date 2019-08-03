@@ -43,4 +43,11 @@ public class TopicController {
         return new ResponseEntity<Topic>(ancestor,HttpStatus.OK);
     }
 
+    @GetMapping("/topic/keyword")
+    public ResponseEntity<?> queryTopicByKeyword(String keyword){
+        List<Topic> topics=topicService.queryTopicByKeyword(keyword);
+        return new ResponseEntity<List<Topic>>(topics,HttpStatus.OK);
+    }
+
+
 }

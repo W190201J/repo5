@@ -6,18 +6,47 @@
     <title>流形--专业、开放的知识分享社区</title>
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="shortcut icon" type="image/jpeg" href="image/manifold-logo5.jpg" />
+    <link rel="stylesheet" type="text/css" href="css/my-layer-skin.css">
     <link rel="stylesheet" type="text/css" href="css/base.css">
     <link rel="stylesheet" type="text/css" href="css/mask.css">
     <link rel="stylesheet" type="text/css" href="css/topic.css">
     <link href="css/style.css" rel="stylesheet">
+    <!--jQuery-->
+    <script type="text/javascript " src="js/jquery-3.3.1.min.js"></script>
+    <!--token服务-->
+    <script type="text/javascript " src="js/jwt.js"></script>
+    <script>
+        var user_info = null;
+
+        function chkToken() {
+            $.ajax({
+                url: 'manifold/chkToken',
+                method: 'get',
+                headers: createAuthorizationTokenHeader(),
+                success: function(data) {
+                    if (data.email == 'fail') {
+                        location.href = "login.html";
+                    } else {
+                        user_info = data;
+                        $('body').css('display', 'block');
+                        console.info('检验成功,user_email:' + data.email);
+                    }
+                },
+                async: 'false',
+                dataType: 'json'
+            });
+        };
+        chkToken();
+    </script>
+
 </head>
 
-<body>
+<body style="display: none">
     <canvas id="canvas"></canvas>
     <div class="top-menu-nav">
         <div class="topnav">
             <center>
-                <a id="home-page" href="#home"><i class="fa fa-tv fa-1g"></i>&nbsp;&nbsp;主页</a>
+                <a id="home-page" href="manifold.html"><i class="fa fa-tv fa-1g"></i>&nbsp;&nbsp;主页</a>
                 <a id="topic-tree" href="topic-tree.html"><i class="fa fa-tree fa-1g"></i>&nbsp;&nbsp;话题树</a>
                 <a id="discover-page" href="#contact"><i class="fa fa-twitch fa-1g"></i>&nbsp;&nbsp;发现</a>&nbsp;&nbsp;
                 <input type="text" placeholder="搜索 问题/话题/用户..">
@@ -26,9 +55,10 @@
         </div>
     </div>
 
+
     <div class="right-top">
         <li>
-            <a href="question-edit.html">
+            <a href="javascript:openQuestionEdit();">
                 <i class="fa fa-lightbulb-o fa-2x"></i>
                 <div>
                     我要提问
@@ -36,7 +66,7 @@
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="javascript:openColectionEdit();">
                 <i class="fa fa-bookmark-o fa-2x"></i>
                 <div>
                     我的收藏
@@ -45,10 +75,11 @@
         </li>
     </div>
 
+
     <div class="right-foot">
         <div class="menu">
             <li class="item" id="profile">
-                <a href="#profile" class="btn"><i class="fa fa-user"></i>用户名</a>
+                <a id="username" href="#profile" class="btn"><i class="fa fa-user-o"></i>用户名</a>
                 <div class="smenu">
                     <a href="#">个人资料</a>
                     <a href="#">Picture</a>
@@ -63,10 +94,10 @@
                 </div>
             </li>
             <li class="item" id="setting">
-                <a href="#setting" class="btn"><i class="fa fa-cog"></i>Setting</a>
+                <a href="#setting" class="btn"><i class="fa fa-bell-o"></i>关注</a>
                 <div class="smenu">
-                    <a href="#">Password</a>
-                    <a href="#">Language</a>
+                    <a href="#">关注了</a>
+                    <a href="#">关注者</a>
                 </div>
             </li>
             <li class="item" id="Logout">
@@ -330,20 +361,34 @@
     </div>
 
     <!--基础js-->
-    <script type="text/javascript " src="js/jquery-3.3.1.min.js"></script>
+
+    <script type="text/javascript " src="js/manifold.js"></script>
+    <script type="text/javascript " src="js/question-edit-layer.js"></script>
     <!--layer-->
     <script type="text/javascript " src="layer/2.4/layer.js"></script>
     <!--layui-->
     <script type="text/javascript" src="layui/layui.js"></script>
-    <!--页面-->
-    <script type="text/javascript " src="js/manifold.js"></script>
-    <!--token服务-->
-    <script type="text/javascript " src="js/jwt.js"></script>
     <!--话题树-->
     <script type="text/javascript " src="js/manifold-topic.js"></script>
-    <!--token服务-->
-    <script type="text/javascript " src="js/jwt.js"></script>
+
     <script>
+        $(function() {
+            /*配置layui弹出层自定义样式*/
+            layer.config({
+                skin: 'my-layer-skin'
+            });
+
+
+            $('#home-page').css({
+                'background-color': '#3498db',
+                'color': '#fff'
+            });
+            console.log(user_info);
+
+            $('#username').html('<i class="fa fa-user-o"></i>' + user_info.username + '<right><img src="image/user_avatar/' + user_info.avatar + '"></right>');
+
+        });
+
         function logout() {
             layer.confirm("确定要退出吗", () => {
                 removeJwtToken();

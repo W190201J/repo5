@@ -9,14 +9,43 @@
     <link rel="stylesheet" type="text/css" href="css/manifold-topic.css">
     <link rel="stylesheet" type="text/css" href="css/my-layer-skin.css">
     <link href="css/style.css" rel="stylesheet">
+
+    <!--jQuery-->
+    <script type="text/javascript " src="js/jquery-3.3.1.min.js"></script>
+    <!--token服务-->
+    <script type="text/javascript " src="js/jwt.js"></script>
+    <script>
+        var user_info = null;
+
+        function chkToken() {
+            $.ajax({
+                url: 'manifold/chkToken',
+                method: 'get',
+                headers: createAuthorizationTokenHeader(),
+                success: function(data) {
+                    if (data.email == 'fail') {
+                        location.href = "login.html";
+                    } else {
+                        user_info = data;
+                        $('body').css('display', 'block');
+                        console.info('检验成功,user_email:' + data.email);
+
+                    }
+                },
+                async: 'false',
+                dataType: 'json'
+            });
+        };
+        chkToken();
+    </script>
 </head>
 
-<body>
+<body style="display: none">
     <canvas id="canvas"></canvas>
     <div class="top-menu-nav">
         <div class="topnav">
             <center>
-                <a id="home-page" href="home"><i class="fa fa-tv fa-1g"></i>&nbsp;&nbsp;主页</a>
+                <a id="home-page" href="manifold.html"><i class="fa fa-tv fa-1g"></i>&nbsp;&nbsp;主页</a>
                 <a id="topic-tree" href="topic-tree.html"><i class="fa fa-tree fa-1g"></i>&nbsp;&nbsp;话题树</a>
                 <a id="discover-page" href="#contact"><i class="fa fa-twitch fa-1g"></i>&nbsp;&nbsp;发现</a>&nbsp;&nbsp;
                 <input type="text" placeholder="搜索 问题/话题/用户..">
@@ -39,7 +68,7 @@
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="javascript:openColectionEdit();">
                 <i class="fa fa-bookmark-o fa-2x"></i>
                 <div>
                     我的收藏
@@ -51,7 +80,7 @@
     <div class="right-foot">
         <div class="menu">
             <li class="item" id="profile">
-                <a href="#profile" class="btn"><i class="fa fa-user-o"></i>用户名</a>
+                <a id="username" href="#profile" class="btn"><i class="fa fa-user-o"></i>用户名</a>
                 <div class="smenu">
                     <a href="#">个人资料</a>
                     <a href="#">Picture</a>
@@ -80,7 +109,6 @@
 
 
     <!--base-->
-    <script type="text/javascript " src="js/jquery-3.3.1.min.js"></script>
     <script type="text/javascript " src="js/manifold.js"></script>
     <script type="text/javascript " src="js/question-edit-layer.js"></script>
     <!--layer-->
@@ -91,13 +119,16 @@
     <script type="text/javascript " src="js/jwt.js"></script>
     <!--话题树-->
     <script type="text/javascript " src="js/manifold-topic.js"></script>
-    <!--token服务-->
-    <script type="text/javascript " src="js/jwt.js"></script>
     <script>
         var fatherTopic = null;
         var sonTopic = null;
         var countSon = 0;
         $(function() {
+            /*配置layui弹出层自定义样式*/
+            layer.config({
+                skin: 'my-layer-skin'
+            });
+
             $('#topic-tree').css({
                 'background-color': '#3498db',
                 'color': '#fff'
@@ -105,6 +136,9 @@
             loadRoot();
             loadSonTopic(1);
             setTimeout("arrageSons();", 500);
+
+            $('#username').html('<i class="fa fa-user-o"></i>' + user_info.username + '<img src="image/user_avatar/' + user_info.avatar + '">');
+
         })
 
 
