@@ -60,14 +60,15 @@
                 tb.render({
                     elem: '#tb',
                     height: 500,
-                    url: '../user' //数据接口
+                    url: '../backuser/blockUser' ,//数据接口
+                    method:'get'
                         ,
                     page: true //开启分页
                         ,
                     limits: [7, 10, 15, 20, 25, 30],
-                    where: {
+                    /*where: {
                         type: 'user_block_list'
-                    },
+                    },*/
                     request: { //重新定义请求参数,定义过后的结果为:?page=1&pageSize=10
                         pageName: 'page',
                         limitName: 'pageSize'
@@ -84,11 +85,19 @@
                                 sort: true,
                                 fixed: 'left'
                             }, {
-                                field: 'uname',
+                                field: 'username',
                                 title: '用户名',
                             }, {
-                                field: 'sex',
+                                field: 'gender',
                                 title: '性别',
+                            templet: function(d) {
+                                if (d.gender == 1)
+                                    return '男';
+                                else if(d.gender==0)
+                                    return '女';
+                                else
+                                    return '';
+                            }
                             }, {
                                 field: 'phone',
                                 title: '手机号码',
@@ -112,18 +121,18 @@
         }
 
 
-        /*用户-恢复*/
+
         function renewUser(uid) {
             layer.confirm('确认要恢复吗？', function(index) {
                 $.ajax({
-                    type: 'POST',
-                    url: '../user',
+                    type: 'PUT',
+                    url: '../backuser/blockUser',
                     data: {
-                        'type': 'renew_user',
+
                         'uid': uid
                     },
                     success: function(returndata) {
-                        if (returndata == 'ok') {
+                        if (returndata >0) {
                             layer.msg('恢复成功', {
                                 time: 1000,
                                 icon: 1

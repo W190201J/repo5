@@ -28,6 +28,11 @@
         <result property="score" column="score"/>
     </resultMap>
 
+    <select id="query" resultMap="userMap">
+		SELECT * FROM user_table limit
+		#{start},#{size}
+	</select>
+
     <select id="queryByEmailPsw" resultMap="userMap">
         select * from user_table where email=#{email} and password=#{password};
     </select>
@@ -39,5 +44,7 @@
     <update id="activation" parameterType="java.lang.String">
         update user_table set status=1 where email=#{email};
     </update>
+
+
 
 </mapper>
