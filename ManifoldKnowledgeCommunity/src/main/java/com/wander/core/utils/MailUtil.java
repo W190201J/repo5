@@ -27,12 +27,11 @@ public class MailUtil {
         props.put("mail.smtp.ssl.enable", "true");
         props.put("mail.smtp.ssl.socketFactory", msf);
 
-
         // 创建验证器
         Authenticator auth = new Authenticator() {
             public PasswordAuthentication getPasswordAuthentication() {
                 //设置发送人的帐号和密码
-                return new PasswordAuthentication("keming_xu@163.com", "w190201j");
+                return new PasswordAuthentication("keming_xu@163.com", "xukeming123");
             }
         };
 
@@ -40,10 +39,8 @@ public class MailUtil {
 
         // 2.创建一个Message，它相当于是邮件内容
         Message message = new MimeMessage(session);
-
         //设置发送者
         message.setFrom(new InternetAddress("keming_xu@163.com"));
-
         //设置发送方式与接收者
         message.setRecipient(Message.RecipientType.TO, new InternetAddress(email));
 

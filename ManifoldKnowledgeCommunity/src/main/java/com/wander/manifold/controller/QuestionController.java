@@ -1,6 +1,7 @@
 package com.wander.manifold.controller;
 
 import com.wander.manifold.pojo.Question;
+import com.wander.manifold.pojo.User;
 import com.wander.manifold.service.IQuestionService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -28,7 +29,9 @@ public class QuestionController {
         Question question = new Question();
         question.setTitle(title);
         question.setQuestionDesc(questionDesc);
-        question.setUid(uid);
+        User user=new User();
+        user.setUid(uid);
+        question.setUser(user);
         question.setCreateTime(new Date());
         question.setStatus(1);
         Integer res = questionService.addQuestion(question);
@@ -38,27 +41,41 @@ public class QuestionController {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
-        question=questionService.queryByTitle(title);
-        //插入关系
-        if(question!=null) {
-            String[] topics = selectedTopics.split(",");
-            for (int i = 0; i < topics.length; i++) {
-                questionService.addRelation(Long.parseLong(topics[i].substring(topics[i].indexOf("-") + 1)), question.getQuestionId());
+        if (res > 0) {
+            question = questionService.queryByTitle(title);
+            //插入关系
+            if (question != null) {
+                String[] topics = selectedTopics.split(",");
+                for (int i = 0; i < topics.length; i++) {
+                    questionService.addRelation(Long.parseLong(topics[i].substring(topics[i].indexOf("-") + 1)), question.getQuestionId());
+                }
             }
+
+            return new ResponseEntity<Long>(question.getQuestionId(), HttpStatus.OK);
+        }else{
+            return new ResponseEntity<Long>(-1L, HttpStatus.OK);
         }
 
-        return new ResponseEntity<Integer>(res, HttpStatus.OK);
     }
 
     @GetMapping("/question/chktitle")
-    public ResponseEntity<?> checkTitle(String title){
-        Question question=questionService.queryByTitle(title);
-        if(question!=null)
-            return new ResponseEntity<Long>(question.getQuestionId(),HttpStatus.OK);
+    public ResponseEntity<?> checkTitle(String title) {
+        Question question = questionService.queryByTitle(title);
+        if (question != null)
+            return new ResponseEntity<Long>(question.getQuestionId(), HttpStatus.OK);
         else
-            return new ResponseEntity<String>("ok",HttpStatus.OK);
+            return new ResponseEntity<String>("ok", HttpStatus.OK);
     }
 
+    @GetMapping("/question/querybyid")
+    public ResponseEntity<?> queryById(Long questionId) {
+        Question question = questionService.queryById(questionId);
+        if (question != null)
+            return new ResponseEntity<Question>(question, HttpStatus.OK);
+        else {
+            question.setQuestionId(-1L);
+            return new ResponseEntity<Question>(question, HttpStatus.OK);
+        }
+    }
 
 }

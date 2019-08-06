@@ -15,7 +15,7 @@ public class Question implements Serializable {
     private Long questionId;
     private String title;
     private String questionDesc;
-    private Long uid;
+    private User user;
     private Integer popularity;
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     @JsonFormat(pattern = "yyyy-MM-dd")
@@ -50,12 +50,12 @@ public class Question implements Serializable {
         this.questionDesc = questionDesc;
     }
 
-    public Long getUid() {
-        return uid;
+    public User getUser() {
+        return user;
     }
 
-    public void setUid(Long uid) {
-        this.uid = uid;
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public Integer getPopularity() {

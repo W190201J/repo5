@@ -12,4 +12,8 @@ public interface IUserMapper {
 
     Integer insert(User user);
 
+    User queryById(Long uid);
+
+    Integer update(Long uid,String username, Integer gender, String avatar, String phone, String industry, String education);
+
 }

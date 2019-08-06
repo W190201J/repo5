@@ -1,8 +1,6 @@
 package com.wander.manifold.controller;
 
 import com.wander.core.utils.FileUtil;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -15,7 +13,7 @@ import java.io.InputStream;
  */
 @RestController
 @RequestMapping("/manifold")
-public class uploadController {
+public class UploadController {
 
     @PostMapping("/upload/image")
     @ResponseBody
@@ -41,5 +39,28 @@ public class uploadController {
         //return new ResponseEntity<String>(returnPath, HttpStatus.OK);
         return returnPath;
     }
+
+
+    @PostMapping("/upload/avatar")
+    @ResponseBody
+    public String uploadAvatar(@RequestParam("upload") MultipartFile upload) {
+        if (upload.isEmpty()) {
+            return "fail";
+        }
+        String fileName = upload.getOriginalFilename();
+        String filePath = "D:/GitHubRepository/repo5/ManifoldKnowledgeCommunity/src/main/webapp/image/user_avatar/";
+        File dest = new File(filePath + fileName);
+        InputStream in=null;
+        try {
+            in=upload.getInputStream();
+        } catch (IOException e) {
+            e.printStackTrace();
+            return "fail";
+        }
+        FileUtil.copyFile(in,dest);
+        String returnPath="{\"uploaded\":1,\"url\":\"/image/user_avatar/" + fileName+"\"}";
+        return returnPath;
+    }
+
 
 }

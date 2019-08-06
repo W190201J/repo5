@@ -95,9 +95,7 @@
                 })
                 .then(editor => {
                     editor_obj = editor;
-                    /*editor.plugins.get('FileRepository').createUploadAdapter = (loader) => {
-                        return new UploadAdapter(loader);
-                    };*/
+
                     console.log(editor);
                 })
                 .catch(error => {
@@ -107,10 +105,11 @@
 
         function submit_question() {
             var selected_topics = new Array();
-            editor_data = editor_obj.getData()
+            editor_data = editor_obj.getData();
             for (var i = 0; i < selected_index; i++) {
                 selected_topics[i] = $('#selected' + i).text();
             }
+            console.log(editor_data);
             console.log(selected_topics);
             $.ajax({
                 url: 'manifold/question',
@@ -123,17 +122,13 @@
                 },
                 dataType: 'text',
                 success: function(returnData) {
-                    if (returnData > 0) {
+                    if (returnData != -1) {
                         //操作成功，进行提示，并关闭当前窗口(设置时间，不然会有抖动情况)
                         layer.msg('发布成功', {
                             time: 1000,
                             icon: 1
                         }, function() {
-                            //先得到当前iframe层的索引,再执行关闭 
-                            var index = parent.layer.getFrameIndex(window.name);
-                            parent.layer.close(index);
-                            //window.parent.loadMyMusicList();
-                            //window.parent.loggedInPage(returndata);
+                            goToQuestion(returnData);
                         });
 
                     } else {
@@ -144,40 +139,6 @@
                 }
             })
 
-        }
-
-        class UploadAdapter {
-            constructor(loader) {
-                this.loader = loader;
-            }
-            upload() {
-                return new Promise((resolve, reject) => {
-                    var form = new FormData();
-                    form.append('upload', this.loader.file);
-                    $.ajax({
-                        url: "manifold/upload/image", //上传图片的url
-                        type: 'POST',
-                        data: form,
-                        dataType: 'json',
-                        processData: false,
-                        contentType: "multipart/form-data",
-                        success: function(data) {
-                            var tempObj = data.data;
-                            var status = data.success;
-                            console.log(data.data);
-                            console.log(status);
-                            if (status == true) {
-                                resolve({
-                                    default: tempObj.imageUrl
-                                });
-                            } else {
-                                reject(data.msg);
-                            }
-                        }
-                    });
-                });
-            }
-            abort() {}
         }
 
         //关键词搜索话题
@@ -226,13 +187,20 @@
                 success: function(returnData) {
                     var btn = '';
                     if (returnData != 'ok') {
-                        btn = `<button class="goToBtn" type="button" onclick="alert(` + returnData + `)">问题已存在(点击前往)</button>`;
+                        btn = `<button class="goToBtn" type="button" onclick="goToQuestion('` + returnData + `')">问题已存在(点击前往)</button>`;
                         $('#goToQuestion').html(btn);
                     } else {
                         $('#goToQuestion').html('');
                     }
                 }
             })
+        }
+
+        function goToQuestion(questionId) {
+            parent.window.location.href = "question.html?questionId=" + questionId;
+            var index = parent.layer.getFrameIndex(window.name);
+            parent.layer.close(index);
+
         }
     </script>
 </body>

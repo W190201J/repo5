@@ -94,7 +94,7 @@
     margin-top: 10px;
     margin-right: 20px;
     font-size: 14px;
-    background: rgba(250, 245, 245, 75);
+    background: rgba(250, 250, 250, 0.90);
 }
 
 
@@ -108,14 +108,15 @@
     height: 120px;
     border-radius: 25px;
     transform: translate(-50%, -50%);
-    background: rgba(210, 210, 210, 0.55);
+    background: rgba(61, 142, 209, 0.55);
+    /*background: rgba(210, 210, 210, 0.55);*/
 }
 
 .right-top li {
     float: left;
     width: 120px;
     height: 90px;
-    background: rgb(250, 250, 250);
+    background: rgba(250, 250, 250, 0.55);
     margin: 15px 15px;
     font-size: 17px;
     font-weight: bold;
@@ -217,7 +218,9 @@
 }
 
 #username img {
-    margin: 0px 15px;
+    margin-top: 0px !important;
+    margin-left: 25px !important;
+    margin-bottom: 0px !important;
     width: 39px;
     height: 39px;
     border: none;

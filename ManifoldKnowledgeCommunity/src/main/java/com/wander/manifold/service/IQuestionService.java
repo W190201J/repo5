@@ -13,4 +13,6 @@ public interface IQuestionService {
 
     Question queryByTitle(String title);
 
+    Question queryById(Long questionId);
+
 }

@@ -12,15 +12,22 @@
         <id property="questionId" column="question_id"/>
         <result property="title" column="title"/>
         <result property="questionDesc" column="question_desc"/>
-        <result property="uid" column="uid"/>
         <result property="popularity" column="popularity"/>
         <result property="createTime" column="create_time"/>
         <result property="status" column="status"/>
+
+        <association property="user" javaType="User">
+            <id property="uid" column="uid"/>
+            <result property="username" column="username"/>
+            <result property="avatar" column="avatar"/>
+            <result property="industry" column="industry"/>
+        </association>
+
     </resultMap>
 
     <insert id="insert" parameterType="Question">
         insert into question_table(title,question_desc,uid,popularity,create_time,status)
-        values(#{title},#{questionDesc},#{uid},#{popularity},#{createTime},#{status});
+        values(#{title},#{questionDesc},#{user.uid},#{popularity},#{createTime},#{status});
     </insert>
 
     <insert id="insertRelation" parameterType="java.lang.Long">
@@ -29,7 +36,11 @@
     </insert>
 
     <select id="queryByTitle" resultMap="questionMap">
-        select * from question_table where title=#{arg0}
+        select a.*,b.username,b.avatar,b.industry from question_table a,user_table b where a.uid=b.uid and a.title=#{arg0}
+    </select>
+
+    <select id="queryById" resultMap="questionMap">
+        select a.*,b.username,b.avatar,b.industry from question_table a,user_table b where a.uid=b.uid and a.question_id=#{arg0}
     </select>
 
 </mapper>

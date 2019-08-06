@@ -18,7 +18,7 @@ function openQuestionEdit() {
 /**
  * 用于打开收藏窗口
  */
-function openColectionEdit() {
+function openCollectionEdit() {
     var url = 'question-edit.html';
 
     //弹出窗口
@@ -26,7 +26,22 @@ function openColectionEdit() {
         type: 2,
         title: '我的收藏',
         content: url,
-        area: ['500px', '575px'],
+        area: ['500px', '675px'],
+        maxmin: true
+    });
+}
+
+/**
+ * 打开个人资料
+ */
+function openUserInfoEdit() {
+    var url = 'user-info-edit.html';
+    //弹出窗口
+    layer.open({
+        type: 2,
+        title: '个人资料',
+        content: url,
+        area: ['500px', '700px'],
         maxmin: true
     });
 }

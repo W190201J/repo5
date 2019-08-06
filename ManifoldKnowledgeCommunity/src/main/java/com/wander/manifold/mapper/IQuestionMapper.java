@@ -16,4 +16,6 @@ public interface IQuestionMapper {
 
     Question queryByTitle(String title);
 
+    Question queryById(Long questionId);
+
 }

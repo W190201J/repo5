@@ -29,4 +29,9 @@ public class QuestionServiceImpl implements IQuestionService {
     public Question queryByTitle(String title) {
         return questionMapper.queryByTitle(title);
     }
+
+    @Override
+    public Question queryById(Long questionId) {
+        return questionMapper.queryById(questionId);
+    }
 }
