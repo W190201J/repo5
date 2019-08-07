@@ -50,4 +50,8 @@
         where uid=#{uid};
     </update>
 
+    <insert id="followAction" parameterType="java.lang.Long">
+        insert into follow_rela_table(followed,follower) values(#{followed},#{follower})
+    </insert>
+
 </mapper>

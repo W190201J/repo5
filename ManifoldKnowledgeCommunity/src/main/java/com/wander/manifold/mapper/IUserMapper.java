@@ -16,4 +16,6 @@ public interface IUserMapper {
 
     Integer update(Long uid,String username, Integer gender, String avatar, String phone, String industry, String education);
 
+    Integer followAction(Long followed,Long follower);
+
 }

@@ -28,6 +28,8 @@
 
     </resultMap>
 
+
+
     <insert id="insert" parameterType="Answer">
         insert into answer_table(question_id,content,uid) values(#{question.questionId},#{content},#{user.uid})
     </insert>

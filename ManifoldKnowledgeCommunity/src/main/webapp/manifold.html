@@ -64,8 +64,9 @@
         <div class="sub-main-container">
             <div class="main-container-header">
                 <center>
-                    <a id="home-page" href="javascript:loadPopQuestion();">阅读最多</a>
-                    <a id="topic-tree" href="javascript:loadQualityQuestion()">点赞最多</a>
+                    <a id="popQues" href="javascript:loadPopQuestion();">阅读最多</a>
+                    <a id="newQues" href="javascript:loadNewQuestion()">最近发布</a>
+                    <a id="quaQues" href="javascript:loadQualityQuestion()">点赞最多</a>
                 </center>
             </div>
             <div class="main-container-body">
@@ -88,7 +89,7 @@
             </a>
         </li>
         <li>
-            <a href="javascript:openColectionEdit();">
+            <a href="javascript:openCollectionEdit();">
                 <i class="fa fa-bookmark-o fa-2x"></i>
                 <div>
                     我的收藏
@@ -165,6 +166,8 @@
         });
 
         function loadPopQuestion() {
+            $('#popQues').css('background', 'rgb(125,125,125)');
+            $('#newQues').css('background', '#333');
             $.ajax({
                 url: 'manifold/question/pop',
                 method: 'get',
@@ -172,7 +175,7 @@
                     'size': '20'
                 },
                 success: function(returnData) {
-                    var div = `<div class="pop">最新问题</div>`;
+                    var div = `<div class="pop">最热问题</div>`;
                     $.each(returnData, function(i, v) {
 
                         var title = v.title;
@@ -203,9 +206,11 @@
             })
         }
 
-        function loadQualityQuestion() {
+        function loadNewQuestion() {
+            $('#popQues').css('background', '#333');
+            $('#newQues').css('background', 'rgb(125,125,125)');
             $.ajax({
-                url: 'manifold/question/pop',
+                url: 'manifold/question/time',
                 method: 'get',
                 data: {
                     'size': '20'
@@ -228,7 +233,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="item-body">
+                                    <div onclick="goToQuestion(` + v.questionId + `)" class="item-body">
                                         ` + title + `
                                     </div>
                                 </div>
@@ -278,6 +283,14 @@
                 $('.search-autocomplete').css('display', 'none');
                 $('.search-autocomplete').html('');
             }
+        }
+
+        function getAid() {
+            return -1;
+        }
+
+        function reSetAid() {
+            aid = -1;
         }
 
         function goToQuestion(questionId) {

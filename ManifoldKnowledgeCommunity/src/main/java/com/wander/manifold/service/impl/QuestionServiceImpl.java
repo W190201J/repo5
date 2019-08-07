@@ -52,4 +52,9 @@ public class QuestionServiceImpl implements IQuestionService {
     public List<Question> queryByTopicId(Long topicId) {
         return questionMapper.queryByTopicId(topicId);
     }
+
+    @Override
+    public List<Question> queryByTime() {
+        return questionMapper.queryByTime();
+    }
 }

@@ -18,8 +18,8 @@ function openQuestionEdit() {
 /**
  * 用于打开收藏窗口
  */
-function openCollectionEdit() {
-    var url = 'question-edit.html';
+function openCollectionEdit(answerId) {
+    var url = 'collection.html';
 
     //弹出窗口
     layer.open({

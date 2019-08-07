@@ -83,11 +83,35 @@
     padding: 0px 0px;
     margin-top: 0px;
     margin-left: 0px;
+    margin-right: 25px;
     margin-bottom: 0px;
     width: 400px;
     height: 20px;
     border: none;
     background: rgb(250, 250, 250);
+}
+
+.answer .answer-header .user-info .user-name h5 {
+    font-size: 16px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.answer .answer-header .user-info .user-name button {
+    padding: 0px 0px;
+    width: 75px;
+    max-height: 24px;
+    border: none;
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background: rgb(7, 136, 84);
+    display: inline-block;
+}
+
+.answer .answer-header .user-info .user-name button:hover {
+    background: rgb(175, 175, 175);
 }
 
 .answer .answer-header .user-info .user-industry {

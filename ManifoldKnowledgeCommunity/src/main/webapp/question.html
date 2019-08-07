@@ -71,7 +71,7 @@
             </a>
         </li>
         <li>
-            <a href="javascript:openColectionEdit();">
+            <a href="javascript:openCollectionEdit(-1);">
                 <i class="fa fa-bookmark-o fa-2x"></i>
                 <div>
                     我的收藏
@@ -168,7 +168,7 @@
 
         var answersData = new Array();
         var countAnswer = 0;
-
+        var aid = -1;
 
         $(function() {
             /*配置layui弹出层自定义样式*/
@@ -313,8 +313,11 @@
                                 <img class="user-avatar" src="image/user_avatar/` + v.user.avatar + `">
                                 <div class="user-info">
                                     <div class="user-name">
-                                        ` + v.user.username + `
+                                        <h5>` + v.user.username + `</h5>
+                                        <button id="follow` + v.user.uid + `" onclick="clickFollow(` + v.user.uid + `)" class="follow-button"><i class="fa fa-plus-circle fa-1g"></i> 关注</button>
+                    
                                     </div>
+                                    
                                     <div class="user-industry">
                                         ` + v.user.industry + `
                                     </div>
@@ -325,16 +328,16 @@
                             </div>
                             <div class="answer-footer">
                                 <li>
-                                    <button class="button1" onclick="alert('agree')" type="button"><i class="fa fa-thumbs-up"></i> 赞同</button>
+                                    <button class="button1" onclick="alert('agree')" type="button"><i class="fa fa-thumbs-up"></i> ` + v.agree + `</button>
                                 </li>
                                 <li>
-                                    <button class="button1" onclick="alert('agree')" type="button"><i class="fa fa-thumbs-down"></i> 反对</button>
+                                    <button class="button1" onclick="alert('agree')" type="button"><i class="fa fa-thumbs-down"></i> ` + v.disagree + `</button>
                                 </li>
                                 <li>
                                     <button id="` + v.answerId + `CommentBtn" class="button2" onclick="getComment('` + v.answerId + `')" type="button"><i class="fa fa-commenting"></i> 评论</button>
                                 </li>
                                 <li>
-                                    <button class="button2" onclick="alert('agree')" type="button"><i class="fa fa-bookmark"></i> 收藏</button>
+                                    <button id="` + v.answerId + `CollectBtn" class="button2" onclick="collectAnswer('` + v.answerId + `')" type="button"><i class="fa fa-bookmark"></i> 收藏</button>
                                 </li>
                             </div>
                             <div id="` + v.answerId + `comment-container" class="comment-container">
@@ -485,9 +488,48 @@
             $('#' + answerId + 'comment-container').css('display', 'none');
         }
 
+        function collectAnswer(answerId) {
+            aid = answerId;
+            openCollectionEdit();
+        }
+
+        function getAid() {
+            return aid;
+        }
+
+        function reSetAid() {
+            aid = -1;
+        }
 
         function loadPopQuestion() {
 
+        }
+
+        function clickFollow(uid) {
+            console.log(uid);
+            console.log(user_info.uid);
+            $.ajax({
+                url: 'manifold/user/follow',
+                method: 'post',
+                data: {
+                    'followed': uid,
+                    'follower': user_info.uid
+                },
+                success: function(returnData) {
+                    if (returnData > 0) {
+                        layer.msg('关注成功', {
+                            time: 1000,
+                            icon: 1
+                        });
+                    } else {
+                        layer.msg('关注失败', {
+                            icon: 2
+                        });
+                    }
+                },
+                dataType: 'text'
+            })
+            $('#follow' + uid).html('<i class="fa fa-check-circle fa-1g"></i> 已关注')
         }
 
         function search_autocomplete() {

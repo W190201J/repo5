@@ -26,4 +26,6 @@ public interface IQuestionMapper {
 
     List<Question> queryByTopicId(Long topicId);
 
+    List<Question> queryByTime();
+
 }

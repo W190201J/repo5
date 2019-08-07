@@ -23,4 +23,6 @@ public interface IQuestionService {
 
     List<Question> queryByTopicId(Long topicId);
 
+    List<Question> queryByTime();
+
 }

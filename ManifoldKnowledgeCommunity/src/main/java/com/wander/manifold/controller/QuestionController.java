@@ -30,7 +30,7 @@ public class QuestionController {
         Question question = new Question();
         question.setTitle(title);
         question.setQuestionDesc(questionDesc);
-        User user=new User();
+        User user = new User();
         user.setUid(uid);
         question.setUser(user);
         question.setCreateTime(new Date());
@@ -53,7 +53,7 @@ public class QuestionController {
             }
 
             return new ResponseEntity<Long>(question.getQuestionId(), HttpStatus.OK);
-        }else{
+        } else {
             return new ResponseEntity<Long>(-1L, HttpStatus.OK);
         }
 
@@ -80,21 +80,26 @@ public class QuestionController {
     }
 
     @GetMapping("/question/pop")
-    public ResponseEntity<?> queryByPop(Integer size){
-        List<Question> questions=questionService.queryByPop(size);
-        return new ResponseEntity<List<Question>>(questions,HttpStatus.OK);
+    public ResponseEntity<?> queryByPop(Integer size) {
+        List<Question> questions = questionService.queryByPop(size);
+        return new ResponseEntity<List<Question>>(questions, HttpStatus.OK);
     }
 
     @GetMapping("question/key")
-    public ResponseEntity<?> queryByKey(String keyword){
-        List<Question> questions=questionService.queryByKey(keyword);
-        return new ResponseEntity<List<Question>>(questions,HttpStatus.OK);
+    public ResponseEntity<?> queryByKey(String keyword) {
+        List<Question> questions = questionService.queryByKey(keyword);
+        return new ResponseEntity<List<Question>>(questions, HttpStatus.OK);
     }
 
     @GetMapping("question/topic")
-    public ResponseEntity<?> queryByTopicId(Long topicId){
-        List<Question> questions=questionService.queryByTopicId(topicId);
-        return new ResponseEntity<List<Question>>(questions,HttpStatus.OK);
+    public ResponseEntity<?> queryByTopicId(Long topicId) {
+        List<Question> questions = questionService.queryByTopicId(topicId);
+        return new ResponseEntity<List<Question>>(questions, HttpStatus.OK);
     }
 
+    @GetMapping("question/time")
+    public ResponseEntity<?> queryByTime() {
+        List<Question> questions = questionService.queryByTime();
+        return new ResponseEntity<List<Question>>(questions, HttpStatus.OK);
+    }
 }

@@ -80,7 +80,7 @@
             </a>
         </li>
         <li>
-            <a href="javascript:openColectionEdit();">
+            <a href="javascript:openCollectionEdit();">
                 <i class="fa fa-bookmark-o fa-2x"></i>
                 <div>
                     我的收藏
@@ -196,6 +196,14 @@
                 $('.search-autocomplete').css('display', 'none');
                 $('.search-autocomplete').html('');
             }
+        }
+
+        function getAid() {
+            return -1;
+        }
+
+        function reSetAid() {
+            aid = -1;
         }
 
         function goToQuestion(questionId) {

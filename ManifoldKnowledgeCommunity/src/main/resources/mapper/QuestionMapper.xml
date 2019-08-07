@@ -58,4 +58,8 @@
         WHERE a.question_id=b.question_id;
     </select>
 
+    <select id="queryByTime" resultMap="questionMap">
+        select a.*,b.username,b.avatar,b.industry FROM question_table a,user_table b WHERE a.uid=b.uid order by create_time desc limit 0,20;
+    </select>
+
 </mapper>
