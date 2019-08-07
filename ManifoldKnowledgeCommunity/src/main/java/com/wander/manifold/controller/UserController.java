@@ -116,10 +116,8 @@ public class UserController {
 
     @PostMapping("/user/follow")
     public ResponseEntity<?> followAction(Long followed,Long follower){
-        System.out.println(followed+","+follower);
         Integer res=userService.followAction(followed,follower);
         return new ResponseEntity<Integer>(res,HttpStatus.OK);
     }
-
 
 }

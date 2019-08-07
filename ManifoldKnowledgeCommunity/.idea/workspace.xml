@@ -2,197 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="59c9379c-526e-4231-8335-cc2400375f66" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/wander/manifold/controller/BackController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/wander/manifold/mapper/BackMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/wander/manifold/pojo/LayuiData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/wander/manifold/service/IBackService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/wander/manifold/service/impl/BackService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/backcss/backcss.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/backcss/backcss.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/backjs/background.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/backjs/background.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/block-user-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/block-user-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/charts-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/charts-1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/del-music-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/del-music-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/e-music-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/e-music-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/Hui-iconfont/1.0.8/demo.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/Hui-iconfont/1.0.8/demo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/Hui-iconfont/1.0.8/iconfont.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/Hui-iconfont/1.0.8/iconfont.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/My97DatePicker/4.8/WdatePicker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/My97DatePicker/4.8/WdatePicker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/My97DatePicker/4.8/calendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/My97DatePicker/4.8/calendar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/My97DatePicker/4.8/lang/en.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/My97DatePicker/4.8/lang/en.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/My97DatePicker/4.8/lang/zh-cn.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/My97DatePicker/4.8/lang/zh-cn.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/My97DatePicker/4.8/lang/zh-tw.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/My97DatePicker/4.8/lang/zh-tw.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/My97DatePicker/4.8/skin/twoer/datepicker-dev.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/My97DatePicker/4.8/skin/twoer/datepicker-dev.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/My97DatePicker/4.8/skin/whyGreen/datepicker.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/My97DatePicker/4.8/skin/whyGreen/datepicker.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/hcharts/Highcharts/5.0.6/readme.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/hcharts/Highcharts/5.0.6/readme.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/jquery.SuperSlide/2.1.1/jquery.SuperSlide.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/jquery.SuperSlide/2.1.1/jquery.SuperSlide.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/jquery.contextmenu/jquery.contextmenu.r2.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/jquery.contextmenu/jquery.contextmenu.r2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/jselect-1.0.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/jselect-1.0.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/layer/2.4/skin/layer.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/layer/2.4/skin/layer.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/laypage/1.2/laypage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/laypage/1.2/laypage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/lightbox2/2.8.1/examples.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/lightbox2/2.8.1/examples.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/lightbox2/2.8.1/js/lightbox-plus-jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/lightbox2/2.8.1/js/lightbox-plus-jquery.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/squid.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/squid.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/anchor/anchor.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/anchor/anchor.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/attachment/attachment.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/attachment/attachment.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/attachment/attachment.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/attachment/attachment.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/attachment/attachment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/attachment/attachment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/background/background.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/background/background.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/background/background.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/background/background.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/background/background.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/background/background.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/charts/chart.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/charts/chart.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/charts/charts.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/charts/charts.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/charts/charts.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/charts/charts.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/charts/charts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/charts/charts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/emotion/emotion.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/emotion/emotion.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/emotion/emotion.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/emotion/emotion.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/emotion/emotion.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/emotion/emotion.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/gmap/gmap.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/gmap/gmap.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/help/help.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/help/help.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/help/help.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/help/help.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/help/help.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/help/help.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/image/image.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/image/image.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/image/image.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/image/image.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/image/image.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/image/image.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/insertframe/insertframe.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/insertframe/insertframe.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/internal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/internal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/link/link.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/link/link.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/map/map.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/map/map.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/map/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/map/show.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/music/music.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/music/music.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/music/music.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/music/music.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/music/music.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/music/music.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/preview/preview.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/preview/preview.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/scrawl/scrawl.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/scrawl/scrawl.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/scrawl/scrawl.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/scrawl/scrawl.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/scrawl/scrawl.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/scrawl/scrawl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/searchreplace/searchreplace.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/searchreplace/searchreplace.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/searchreplace/searchreplace.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/searchreplace/searchreplace.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/snapscreen/snapscreen.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/snapscreen/snapscreen.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/spechars/spechars.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/spechars/spechars.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/spechars/spechars.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/spechars/spechars.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/table/edittable.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/table/edittable.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/table/edittable.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/table/edittable.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/table/edittable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/table/edittable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/table/edittd.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/table/edittd.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/table/edittip.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/table/edittip.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/template/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/template/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/template/template.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/template/template.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/template/template.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/template/template.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/template/template.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/template/template.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/video/video.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/video/video.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/video/video.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/video/video.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/video/video.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/video/video.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/webapp/webapp.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/webapp/webapp.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/wordimage/tangram.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/wordimage/tangram.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/wordimage/wordimage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/wordimage/wordimage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/wordimage/wordimage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/dialogs/wordimage/wordimage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/lang/en/en.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/lang/en/en.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/lang/zh-cn/zh-cn.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/lang/zh-cn/zh-cn.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/themes/default/css/ueditor.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/themes/default/css/ueditor.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/themes/default/css/ueditor.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/themes/default/css/ueditor.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/themes/default/dialogbase.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/themes/default/dialogbase.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/themes/iframe.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/themes/iframe.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/SyntaxHighlighter/shCore.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/SyntaxHighlighter/shCore.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/codemirror/codemirror.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/codemirror/codemirror.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/codemirror/codemirror.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/codemirror/codemirror.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/highcharts/adapters/mootools-adapter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/highcharts/adapters/mootools-adapter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/highcharts/adapters/mootools-adapter.src.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/highcharts/adapters/mootools-adapter.src.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/highcharts/adapters/prototype-adapter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/highcharts/adapters/prototype-adapter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/highcharts/adapters/prototype-adapter.src.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/highcharts/adapters/prototype-adapter.src.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/highcharts/adapters/standalone-framework.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/highcharts/adapters/standalone-framework.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/highcharts/adapters/standalone-framework.src.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/highcharts/adapters/standalone-framework.src.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/highcharts/highcharts-more.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/highcharts/highcharts-more.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/highcharts/highcharts-more.src.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/highcharts/highcharts-more.src.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/highcharts/highcharts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/highcharts/highcharts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/highcharts/highcharts.src.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/highcharts/highcharts.src.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/highcharts/modules/annotations.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/highcharts/modules/annotations.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/highcharts/modules/annotations.src.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/highcharts/modules/annotations.src.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/highcharts/modules/canvas-tools.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/highcharts/modules/canvas-tools.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/highcharts/modules/canvas-tools.src.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/highcharts/modules/canvas-tools.src.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/highcharts/modules/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/highcharts/modules/data.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/highcharts/modules/data.src.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/highcharts/modules/data.src.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/highcharts/modules/drilldown.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/highcharts/modules/drilldown.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/highcharts/modules/drilldown.src.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/highcharts/modules/drilldown.src.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/highcharts/modules/exporting.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/highcharts/modules/exporting.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/highcharts/modules/exporting.src.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/highcharts/modules/exporting.src.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/highcharts/modules/funnel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/highcharts/modules/funnel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/highcharts/modules/funnel.src.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/highcharts/modules/funnel.src.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/highcharts/modules/heatmap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/highcharts/modules/heatmap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/highcharts/modules/heatmap.src.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/highcharts/modules/heatmap.src.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/highcharts/modules/map.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/highcharts/modules/map.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/highcharts/modules/map.src.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/highcharts/modules/map.src.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/highcharts/modules/no-data-to-display.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/highcharts/modules/no-data-to-display.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/highcharts/modules/no-data-to-display.src.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/highcharts/modules/no-data-to-display.src.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/highcharts/themes/dark-blue.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/highcharts/themes/dark-blue.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/highcharts/themes/dark-green.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/highcharts/themes/dark-green.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/highcharts/themes/gray.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/highcharts/themes/gray.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/highcharts/themes/grid.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/highcharts/themes/grid.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/highcharts/themes/skies.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/highcharts/themes/skies.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/jquery-1.10.2.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/jquery-1.10.2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/jquery-1.10.2.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/jquery-1.10.2.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/video-js/font/vjs.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/video-js/font/vjs.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/video-js/video-js.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/video-js/video-js.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/video-js/video-js.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/video-js/video-js.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/video-js/video.dev.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/video-js/video.dev.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/video-js/video.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/video-js/video.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/webuploader/webuploader.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/webuploader/webuploader.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/webuploader/webuploader.custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/webuploader/webuploader.custom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/webuploader/webuploader.custom.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/webuploader/webuploader.custom.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/webuploader/webuploader.flashonly.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/webuploader/webuploader.flashonly.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/webuploader/webuploader.flashonly.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/webuploader/webuploader.flashonly.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/webuploader/webuploader.html5only.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/webuploader/webuploader.html5only.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/webuploader/webuploader.html5only.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/webuploader/webuploader.html5only.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/webuploader/webuploader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/webuploader/webuploader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/webuploader/webuploader.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/webuploader/webuploader.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/webuploader/webuploader.withoutimage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/webuploader/webuploader.withoutimage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/webuploader/webuploader.withoutimage.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/webuploader/webuploader.withoutimage.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/zeroclipboard/ZeroClipboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/zeroclipboard/ZeroClipboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/zeroclipboard/ZeroClipboard.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/third-party/zeroclipboard/ZeroClipboard.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/ueditor.all.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/ueditor.all.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/ueditor.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/ueditor.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/ueditor.parse.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/ueditor/1.4.3/ueditor.parse.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/webuploader/0.1.5/webuploader.custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/webuploader/0.1.5/webuploader.custom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/webuploader/0.1.5/webuploader.fis.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/webuploader/0.1.5/webuploader.fis.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/webuploader/0.1.5/webuploader.html5only.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/webuploader/0.1.5/webuploader.html5only.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/webuploader/0.1.5/webuploader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/webuploader/0.1.5/webuploader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/webuploader/0.1.5/webuploader.noimage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/webuploader/0.1.5/webuploader.noimage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/webuploader/0.1.5/webuploader.nolog.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/webuploader/0.1.5/webuploader.nolog.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/webuploader/0.1.5/webuploader.withoutimage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/webuploader/0.1.5/webuploader.withoutimage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/zTree/v3/api/en/setting.callback.beforeDrag.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/zTree/v3/api/en/setting.callback.beforeDrag.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/zTree/v3/api/en/setting.callback.beforeDrop.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/zTree/v3/api/en/setting.callback.beforeDrop.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/zTree/v3/api/en/setting.callback.onDrag.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/zTree/v3/api/en/setting.callback.onDrag.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/zTree/v3/api/en/setting.callback.onDragMove.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/zTree/v3/api/en/setting.callback.onDragMove.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/zTree/v3/api/en/setting.callback.onDrop.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/zTree/v3/api/en/setting.callback.onDrop.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/zTree/v3/api/en/setting.edit.drag.inner.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/zTree/v3/api/en/setting.edit.drag.inner.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/zTree/v3/api/en/setting.edit.drag.next.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/zTree/v3/api/en/setting.edit.drag.next.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/zTree/v3/api/en/setting.edit.drag.prev.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/zTree/v3/api/en/setting.edit.drag.prev.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/zTree/v3/api/en/zTreeObj.addNodes.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/zTree/v3/api/en/zTreeObj.addNodes.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/zTree/v3/api/en/zTreeObj.getChangeCheckedNodes.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/zTree/v3/api/en/zTreeObj.getChangeCheckedNodes.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/zTree/v3/api/en/zTreeObj.getCheckedNodes.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/zTree/v3/api/en/zTreeObj.getCheckedNodes.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/zTree/v3/api/en/zTreeObj.getNodes.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/zTree/v3/api/en/zTreeObj.getNodes.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/zTree/v3/api/en/zTreeObj.getNodesByFilter.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/zTree/v3/api/en/zTreeObj.getNodesByFilter.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/zTree/v3/api/en/zTreeObj.getNodesByParam.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/zTree/v3/api/en/zTreeObj.getNodesByParam.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/zTree/v3/api/en/zTreeObj.getNodesByParamFuzzy.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/zTree/v3/api/en/zTreeObj.getNodesByParamFuzzy.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/zTree/v3/api/en/zTreeObj.getSelectedNodes.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/zTree/v3/api/en/zTreeObj.getSelectedNodes.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/lib/zTree/v3/api/en/zTreeObj.transformToArray.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/lib/zTree/v3/api/en/zTreeObj.transformToArray.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/online-user-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/online-user-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/static/h-ui.admin/css/H-ui.admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/static/h-ui.admin/css/H-ui.admin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/static/h-ui.admin/css/H-ui.login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/static/h-ui.admin/css/H-ui.login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/static/h-ui.admin/js/H-ui.admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/static/h-ui.admin/js/H-ui.admin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/static/h-ui.admin/skin/blue/skin.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/static/h-ui.admin/skin/blue/skin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/static/h-ui.admin/skin/default/skin.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/static/h-ui.admin/skin/default/skin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/static/h-ui.admin/skin/green/skin.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/static/h-ui.admin/skin/green/skin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/static/h-ui.admin/skin/orange/skin.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/static/h-ui.admin/skin/orange/skin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/static/h-ui.admin/skin/red/skin.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/static/h-ui.admin/skin/red/skin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/static/h-ui.admin/skin/yellow/skin.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/static/h-ui.admin/skin/yellow/skin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/static/h-ui/css/H-ui.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/static/h-ui/css/H-ui.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/static/h-ui/css/H-ui.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/static/h-ui/css/H-ui.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/static/h-ui/js/H-ui.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/static/h-ui/js/H-ui.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/static/h-ui/js/H-ui.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/static/h-ui/js/H-ui.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/user-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/user-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background/welcome.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/background/welcome.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wander/manifold/controller/QuestionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wander/manifold/controller/QuestionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wander/manifold/controller/TopicController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wander/manifold/controller/TopicController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wander/manifold/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wander/manifold/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wander/manifold/mapper/ITopicMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wander/manifold/mapper/ITopicMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wander/manifold/service/ITopicService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wander/manifold/service/ITopicService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wander/manifold/service/impl/TopicServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wander/manifold/service/impl/TopicServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/TopicMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/TopicMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/question.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/question.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -207,28 +24,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/wander/manifold/service/IUserService.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/wander/manifold/controller/UserPreferController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+            <state relative-caret-position="227">
+              <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/wander/manifold/service/impl/UserServiceImpl.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/wander/manifold/mapper/IUserMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="532">
-              <caret line="41" column="58" selection-start-line="41" selection-start-column="58" selection-end-line="41" selection-end-column="58" />
-              <folding>
-                <element signature="e#624#625#0" expanded="true" />
-                <element signature="e#675#676#0" expanded="true" />
-                <element signature="e#829#830#0" expanded="true" />
-                <element signature="e#877#878#0" expanded="true" />
-                <element signature="e#1198#1199#0" expanded="true" />
-                <element signature="e#1263#1264#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="323">
+              <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/PreferMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="227">
+              <caret line="25" column="88" selection-start-line="25" selection-start-column="88" selection-end-line="25" selection-end-column="88" />
             </state>
           </provider>
         </entry>
@@ -236,54 +57,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/wander/manifold/controller/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1938">
-              <caret line="119" column="39" selection-start-line="119" selection-start-column="39" selection-end-line="119" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1007">
-              <caret line="53" column="86" selection-start-line="53" selection-start-column="86" selection-end-line="53" selection-end-column="86" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/wander/manifold/pojo/LayuiData.java">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/wander/manifold/mapper/BackMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="37">
-              <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/BackMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="40" column="13" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/wander/manifold/service/IBackService.java">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/wander/manifold/controller/BackController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="3" column="37" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
+            <state relative-caret-position="427">
+              <caret line="117" column="71" selection-start-line="117" selection-start-column="71" selection-end-line="117" selection-end-column="71" />
             </state>
           </provider>
         </entry>
@@ -313,17 +88,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/question-edit.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/topic-tree.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wander/core/utils/ImageUploadUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wander/core/utils/FileUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wander/manifold/controller/CheckTokenController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wander/manifold/mapper/ITopicMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wander/manifold/service/ITopicService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wander/manifold/service/impl/TopicServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/TopicMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wander/manifold/controller/TopicController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/question.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/wander/manifold/service/impl/AnswerService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wander/manifold/mapper/IAnswerMapper.java" />
@@ -348,7 +112,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/wander/manifold/mapper/IQuestionMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wander/manifold/service/IQuestionService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wander/manifold/service/impl/QuestionServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wander/manifold/controller/QuestionController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/QuestionMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/wander/manifold/mapper/ICollectionMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wander/manifold/service/ICollectionService.java" />
@@ -359,11 +122,23 @@
         <option value="$PROJECT_DIR$/src/main/java/com/wander/manifold/mapper/IUserMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wander/manifold/service/IUserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wander/manifold/service/impl/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wander/manifold/controller/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/wander/manifold/controller/BackController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wander/manifold/mapper/BackMapper.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/BackMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wander/manifold/mapper/ITopicMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wander/manifold/service/ITopicService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wander/manifold/service/impl/TopicServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wander/manifold/controller/QuestionController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wander/manifold/pojo/Prefer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wander/manifold/mapper/IPreferMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wander/manifold/service/IPreferService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wander/manifold/service/impl/PreferServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/TopicMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wander/manifold/controller/TopicController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/PreferMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wander/manifold/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wander/manifold/controller/UserPreferController.java" />
       </list>
     </option>
   </component>
@@ -659,7 +434,7 @@
       <workItem from="1564965277513" duration="10471000" />
       <workItem from="1565056661022" duration="19457000" />
       <workItem from="1565138859997" duration="26786000" />
-      <workItem from="1565187570048" duration="1414000" />
+      <workItem from="1565187570048" duration="4902000" />
     </task>
     <servers />
   </component>
@@ -696,10 +471,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="160669000" />
+    <option name="totallyTimeSpent" value="164157000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2600536" />
@@ -744,106 +519,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wander/manifold/controller/CheckTokenController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="64" column="74" selection-start-line="64" selection-start-column="74" selection-end-line="64" selection-end-column="74" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#433#449#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wander/manifold/service/impl/TopicServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="42" column="64" lean-forward="true" selection-start-line="42" selection-start-column="64" selection-end-line="42" selection-end-column="64" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#536#537#0" expanded="true" />
-            <element signature="e#582#583#0" expanded="true" />
-            <element signature="e#644#645#0" expanded="true" />
-            <element signature="e#701#702#0" expanded="true" />
-            <element signature="e#1008#1009#0" expanded="true" />
-            <element signature="e#1071#1072#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wander/manifold/controller/TopicController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="48" column="69" lean-forward="true" selection-start-line="48" selection-start-column="69" selection-end-line="48" selection-end-column="69" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wander/manifold/mapper/ITopicMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="61">
-          <caret line="15" column="22" lean-forward="true" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wander/manifold/service/ITopicService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wander/manifold/pojo/Topic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="20" column="3" lean-forward="true" selection-start-line="20" selection-start-column="3" selection-end-line="21" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1013#1014#0" expanded="true" />
-            <element signature="e#1042#1043#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/manifold.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="46" column="23" lean-forward="true" selection-end-line="401" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/question.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="618">
-          <caret line="401" column="7" selection-start-line="401" selection-start-column="7" selection-end-line="401" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/user-info-edit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="198" column="39" lean-forward="true" selection-start-line="198" selection-start-column="39" selection-end-line="198" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wander/core/utils/MailUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="42" column="66" selection-start-line="42" selection-start-column="66" selection-end-line="42" selection-end-column="66" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wander/manifold/controller/UploadController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -926,29 +601,6 @@
             <element signature="e#1901#1907#0" expanded="true" />
             <element signature="e#1907#1913#0" expanded="true" />
             <element signature="e#1913#1919#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/TopicMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="626">
-          <caret line="36" column="46" lean-forward="true" selection-end-line="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wander/manifold/pojo/Comment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="38" column="27" selection-start-line="38" selection-start-column="27" selection-end-line="38" selection-end-column="27" />
-          <folding>
-            <element signature="e#816#817#0" expanded="true" />
-            <element signature="e#854#855#0" expanded="true" />
-            <element signature="e#886#887#0" expanded="true" />
-            <element signature="e#922#923#0" expanded="true" />
-            <element signature="e#956#957#0" expanded="true" />
-            <element signature="e#1008#1009#0" expanded="true" />
-            <element signature="e#1054#1055#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1057,34 +709,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wander/manifold/service/impl/QuestionServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="52" column="54" selection-start-line="52" selection-start-column="54" selection-end-line="52" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1382#1383#0" expanded="true" />
-            <element signature="e#1443#1444#0" expanded="true" />
-            <element signature="e#1500#1501#0" expanded="true" />
-            <element signature="e#1527#1528#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/QuestionMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="341">
           <caret line="61" column="15" selection-start-line="61" selection-start-column="15" selection-end-line="61" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wander/manifold/controller/QuestionController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="99" column="30" selection-start-line="99" selection-start-column="17" selection-end-line="99" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1127,13 +755,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/AnswerMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="38" column="58" selection-start-line="38" selection-start-column="58" selection-end-line="38" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/CollectionMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
@@ -1145,13 +766,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-190">
           <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wander/manifold/mapper/IUserMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="54" />
         </state>
       </provider>
     </entry>
@@ -1184,13 +798,6 @@
             <element signature="e#1198#1199#0" expanded="true" />
             <element signature="e#1263#1264#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wander/manifold/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1938">
-          <caret line="119" column="39" selection-start-line="119" selection-start-column="39" selection-end-line="119" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -1232,6 +839,187 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
           <caret line="40" column="13" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wander/manifold/service/ITopicService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="23" column="52" lean-forward="true" selection-start-line="23" selection-start-column="52" selection-end-line="23" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wander/manifold/service/impl/TopicServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="46" column="64" lean-forward="true" selection-start-line="46" selection-start-column="64" selection-end-line="46" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#536#537#0" expanded="true" />
+            <element signature="e#582#583#0" expanded="true" />
+            <element signature="e#644#645#0" expanded="true" />
+            <element signature="e#701#702#0" expanded="true" />
+            <element signature="e#1008#1009#0" expanded="true" />
+            <element signature="e#1079#1080#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wander/manifold/controller/QuestionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="104" selection-start-line="104" selection-end-line="104" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wander/manifold/pojo/Comment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="61">
+          <caret line="9" column="52" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="52" />
+          <folding>
+            <element signature="e#789#790#0" expanded="true" />
+            <element signature="e#816#817#0" expanded="true" />
+            <element signature="e#854#855#0" expanded="true" />
+            <element signature="e#886#887#0" expanded="true" />
+            <element signature="e#922#923#0" expanded="true" />
+            <element signature="e#956#957#0" expanded="true" />
+            <element signature="e#1008#1009#0" expanded="true" />
+            <element signature="e#1054#1055#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wander/manifold/pojo/Prefer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="14" column="46" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
+          <folding>
+            <element signature="e#361#362#0" expanded="true" />
+            <element signature="e#389#390#0" expanded="true" />
+            <element signature="e#415#416#0" expanded="true" />
+            <element signature="e#451#452#0" expanded="true" />
+            <element signature="e#481#482#0" expanded="true" />
+            <element signature="e#513#514#0" expanded="true" />
+            <element signature="e#543#544#0" expanded="true" />
+            <element signature="e#587#588#0" expanded="true" />
+            <element signature="e#625#626#0" expanded="true" />
+            <element signature="e#655#656#0" expanded="true" />
+            <element signature="e#683#684#0" expanded="true" />
+            <element signature="e#723#724#0" expanded="true" />
+            <element signature="e#757#758#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/AnswerMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="38" column="58" selection-end-line="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wander/manifold/service/impl/QuestionServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="52" column="54" selection-start-line="52" selection-start-column="54" selection-end-line="52" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1382#1383#0" expanded="true" />
+            <element signature="e#1443#1444#0" expanded="true" />
+            <element signature="e#1500#1501#0" expanded="true" />
+            <element signature="e#1551#1552#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wander/manifold/service/IPreferService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wander/manifold/mapper/IPreferMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="30" lean-forward="true" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wander/manifold/service/impl/PreferServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wander/manifold/mapper/ITopicMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="29" column="11" lean-forward="true" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wander/manifold/controller/TopicController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="52" column="71" selection-start-line="52" selection-start-column="71" selection-end-line="52" selection-end-column="71" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/TopicMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/PreferMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="25" column="88" selection-start-line="25" selection-start-column="88" selection-end-line="25" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wander/manifold/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="117" column="71" selection-start-line="117" selection-start-column="71" selection-end-line="117" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wander/manifold/mapper/IUserMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wander/manifold/controller/UserPreferController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

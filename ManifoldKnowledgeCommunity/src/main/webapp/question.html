@@ -242,6 +242,32 @@
                     loadAnswer(questionId);
                 },
                 dataType: 'json'
+            });
+            /*记录用户行为*/
+            $.ajax({
+                url: 'manifold/topic/questionId',
+                method: 'get',
+                data: {
+                    'questionId': questionId
+                },
+                success: function(returnData) {
+                    $.each(returnData, function(i, v) {
+                        addPrefer(user_info.uid, v);
+                    })
+                },
+                dataType: 'json'
+            });
+
+        }
+        /*记录用户行为偏好*/
+        function addPrefer(uid, topicId) {
+            $.ajax({
+                url: 'manifold/user/prefer',
+                method: 'post',
+                data: {
+                    'uid': uid,
+                    'topicId': topicId
+                }
             })
         }
 

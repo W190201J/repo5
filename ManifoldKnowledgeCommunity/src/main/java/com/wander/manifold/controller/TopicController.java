@@ -49,5 +49,11 @@ public class TopicController {
         return new ResponseEntity<List<Topic>>(topics,HttpStatus.OK);
     }
 
+    @GetMapping("/topic/questionId")
+    public ResponseEntity<?> queryTopicIdByQuestionId(Long questionId){
+        List<Long> topicIds=topicService.queryTopicIdByQuestionId(questionId);
+        return new ResponseEntity<List<Long>>(topicIds,HttpStatus.OK);
+    }
+
 
 }

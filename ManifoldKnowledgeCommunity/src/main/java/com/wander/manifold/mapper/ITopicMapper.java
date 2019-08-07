@@ -27,4 +27,6 @@ public interface ITopicMapper {
     //关键词查找话题
     List<Topic> queryTopicByKeyword(String keyword);
 
+    List<Long> queryTopicIdByQuestionId(Long questionId);
+
 }

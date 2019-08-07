@@ -102,4 +102,5 @@ public class QuestionController {
         List<Question> questions = questionService.queryByTime();
         return new ResponseEntity<List<Question>>(questions, HttpStatus.OK);
     }
+
 }

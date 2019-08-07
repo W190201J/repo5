@@ -42,4 +42,9 @@ public class TopicServiceImpl implements ITopicService {
     public List<Topic> queryTopicByKeyword(String keyword) {
         return topicMapper.queryTopicByKeyword("%"+keyword+"%");
     }
+
+    @Override
+    public List<Long> queryTopicIdByQuestionId(Long questionId) {
+        return topicMapper.queryTopicIdByQuestionId(questionId);
+    }
 }
