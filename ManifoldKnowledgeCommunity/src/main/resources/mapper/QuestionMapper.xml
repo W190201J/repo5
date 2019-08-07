@@ -43,4 +43,19 @@
         select a.*,b.username,b.avatar,b.industry from question_table a,user_table b where a.uid=b.uid and a.question_id=#{arg0}
     </select>
 
+    <select id="queryByPop" resultMap="questionMap">
+       SELECT a.*,b.username,b.avatar,b.industry FROM question_table a,user_table b WHERE a.uid=b.uid ORDER BY a.popularity DESC LIMIT 0,#{arg0};
+    </select>
+
+    <select id="queryByKey" resultMap="questionMap">
+        select * from question_table where title like #{arg0} or question_desc like #{arg0} limit 0,5
+    </select>
+
+    <select id="queryByTopicId" resultMap="questionMap">
+        SELECT b.* FROM
+        (SELECT question_id FROM topic_question_rela_table WHERE topic_id=#{arg0}) a,
+        (SELECT a.*,b.username,b.avatar,b.industry FROM question_table a,user_table b WHERE a.uid=b.uid) b
+        WHERE a.question_id=b.question_id;
+    </select>
+
 </mapper>

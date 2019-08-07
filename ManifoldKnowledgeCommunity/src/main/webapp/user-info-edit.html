@@ -43,7 +43,7 @@
 <body>
     <div class="user-info-editor-container">
         <div class="top-avatar">
-            <img src="image/user_avatar/keming_xu@163.com_avatar.jpg">
+            <img src="">
         </div>
         <div class="avatar-upload">
             <a href="javascript:;" class="upload">选择头像
@@ -90,7 +90,7 @@
     <!--富文本-->
     <script src="ckeditor5-build-classic-master/build/ckeditor.js"></script>
     <script>
-        var fileName = null;
+        var fileName = user_info.avatar;
         $(function() {
             var input = $("#uploader");
             // ①为input设定change事件
@@ -100,7 +100,7 @@
                     uploadAvatar(this);
                 }
             })
-
+            fileName = user_info.avatar;
             $('.top-avatar img').attr('src', 'image/user_avatar/' + user_info.avatar);
             $('#email').val(user_info.email);
             $('#username').val(user_info.username);
@@ -142,7 +142,7 @@
         }
 
         function submit_question() {
-            var strs = fileName.toString().split('/');
+            var strs = fileName.split('/');
             var avatarName = strs[3];
             console.log(avatarName);
             $.ajax({
@@ -176,6 +176,65 @@
 
                 }
             })
+
+
+            function search_autocomplete() {
+                $('.search-autocomplete').html('');
+                var keyword = $('#search-input').val();
+                if (keyword != '') {
+                    $.ajax({
+                        url: 'manifold/question/key',
+                        method: 'get',
+                        data: {
+                            'keyword': keyword
+                        },
+                        success: function(returnData) {
+                            if (returnData.length != 0) {
+                                var div = '';
+                                $.each(returnData, function(i, v) {
+                                    var str = lightKeyWrod(keyword, v.title);
+                                    if (str.length > 15) {
+                                        str = str.substring(0, 15);
+                                    }
+                                    div += `
+                        <div onclick="goToQuestion('` + v.questionId + `')" class="search-autocomplete-item">
+                            ` + str + `
+                        </div>
+                        `;
+                                })
+                                $('.search-autocomplete').html(div);
+                            } else {
+                                $('.search-autocomplete').css('display', 'none');
+                            }
+
+                        },
+                        dataType: 'json'
+                    })
+                    $('.search-autocomplete').css('display', 'block');
+                } else {
+                    $('.search-autocomplete').css('display', 'none');
+                    $('.search-autocomplete').html('');
+                }
+            }
+
+            function goToQuestion(questionId) {
+                window.location.href = "question.html?questionId=" + questionId;
+            }
+
+            function lightKeyWrod(keyword, str) {
+                var reg = new RegExp("(" + keyword + ")", "g");
+                var newstr = str;
+                if (!reg.test(str))
+                    newstr = str.replace(reg, "<font color=red>$1</font>");
+                return newstr;
+            }
+
+            function logout() {
+                layer.confirm("确定要退出吗", () => {
+                    removeJwtToken();
+                    window.location.href = "login.html";
+                })
+            }
         }
     </script>
 </body>

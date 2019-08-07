@@ -16,7 +16,7 @@ public class Question implements Serializable {
     private String title;
     private String questionDesc;
     private User user;
-    private Integer popularity;
+    private Long popularity;
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     @JsonFormat(pattern = "yyyy-MM-dd")
     private Date createTime;
@@ -58,11 +58,11 @@ public class Question implements Serializable {
         this.user = user;
     }
 
-    public Integer getPopularity() {
+    public Long getPopularity() {
         return popularity;
     }
 
-    public void setPopularity(Integer popularity) {
+    public void setPopularity(Long popularity) {
         this.popularity = popularity;
     }
 

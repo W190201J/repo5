@@ -48,9 +48,14 @@
             <center>
                 <a id="home-page" href="manifold.html"><i class="fa fa-tv fa-1g"></i>&nbsp;&nbsp;主页</a>
                 <a id="topic-tree" href="topic-tree.html"><i class="fa fa-tree fa-1g"></i>&nbsp;&nbsp;话题树</a>
-                <a id="discover-page" href="#contact"><i class="fa fa-twitch fa-1g"></i>&nbsp;&nbsp;发现</a>&nbsp;&nbsp;
-                <input type="text" placeholder="搜索 问题/话题/用户..">
-                <button id="search-btn"><i class="fa fa-search fa-lg"></i>&nbsp;search</button>
+                <a id="discover-page" href="discover.html"><i class="fa fa-twitch fa-1g"></i>&nbsp;&nbsp;发现</a>&nbsp;&nbsp;
+                <div class="search-input-container">
+                    <input id="search-input" type="text" placeholder="搜索 问题/话题/用户.." onkeyup="search_autocomplete()">
+                    <div class="search-autocomplete">
+
+                    </div>
+                </div>
+                <button id="search-btn" onclik=""><i class="fa fa-search fa-lg"></i>&nbsp;search</button>
             </center>
         </div>
     </div>
@@ -380,12 +385,19 @@
                     ckfinder: {
                         uploadUrl: "manifold/upload/image" //图片上传url
                     },
-                    toolbar: ['bold', 'italic', 'bulletedList', 'numberedList', 'imageTextAlternative', 'imageUpload', 'blockQuote', 'undo', 'redo'],
+                    toolbar: ["heading", 'bold', 'italic', "link", 'numberedList', 'imageTextAlternative', 'imageUpload', 'blockQuote', 'undo', 'redo'],
                     language: 'zh-cn',
                     image: {
                         toolbar: ['imageTextAlternative'],
                         styles: ['full', 'side']
                     },
+                    mention: {
+                        feeds: [{
+                            marker: '@',
+                            feed: ['@Barney', '@Lily', '@Marshall', '@Robin', '@Ted'],
+                            minimumCharacters: 1
+                        }]
+                    }
                 })
                 .then(editor => {
                     editor_obj = editor;
@@ -473,6 +485,61 @@
             $('#' + answerId + 'comment-container').css('display', 'none');
         }
 
+
+        function loadPopQuestion() {
+
+        }
+
+        function search_autocomplete() {
+            $('.search-autocomplete').html('');
+            var keyword = $('#search-input').val();
+            if (keyword != '') {
+                $.ajax({
+                    url: 'manifold/question/key',
+                    method: 'get',
+                    data: {
+                        'keyword': keyword
+                    },
+                    success: function(returnData) {
+                        if (returnData.length != 0) {
+                            var div = '';
+                            $.each(returnData, function(i, v) {
+                                var str = lightKeyWrod(keyword, v.title);
+                                if (str.length > 15) {
+                                    str = str.substring(0, 15);
+                                }
+                                div += `
+                <div onclick="goToQuestion('` + v.questionId + `')" class="search-autocomplete-item">
+                    ` + str + `
+                </div>
+                `;
+                            })
+                            $('.search-autocomplete').html(div);
+                        } else {
+                            $('.search-autocomplete').css('display', 'none');
+                        }
+
+                    },
+                    dataType: 'json'
+                })
+                $('.search-autocomplete').css('display', 'block');
+            } else {
+                $('.search-autocomplete').css('display', 'none');
+                $('.search-autocomplete').html('');
+            }
+        }
+
+        function goToQuestion(questionId) {
+            window.location.href = "question.html?questionId=" + questionId;
+        }
+
+        function lightKeyWrod(keyword, str) {
+            var reg = new RegExp("(" + keyword + ")", "g");
+            var newstr = str;
+            if (!reg.test(str))
+                newstr = str.replace(reg, "<font color=red>$1</font>");
+            return newstr;
+        }
 
         function logout() {
             layer.confirm("确定要退出吗", () => {

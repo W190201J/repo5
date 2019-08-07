@@ -56,6 +56,9 @@ function clickSonTopic(father_id, son_id) {
 
     var selectTopicId = $("#" + son_id + " input").val();
 
+    var sonTopicId = son_id.split('son');
+    loadSonTopicQuestion(sonTopic[sonTopicId[1]].topicId);
+
     /**加载新父话题数据*/
     for (var i = 0; i < countSon; i++) {
         if (sonTopic[i].topicId == selectTopicId) {
@@ -67,6 +70,7 @@ function clickSonTopic(father_id, son_id) {
     loadSonTopic(fatherTopic.topicId);
     /**排列子类 */
     setTimeout("arrageSons();", 500);
+
 
 }
 
@@ -204,5 +208,43 @@ function loadRoot() {
             `;
             $('.topic-container').html(div);
         }
+    })
+}
+
+function loadSonTopicQuestion(topicId) {
+    $.ajax({
+        url: 'manifold/question/topic',
+        method: 'get',
+        data: {
+            'topicId': topicId
+        },
+        success: function(returnData) {
+            var div = '';
+            $.each(returnData, function(i, v) {
+                var title = v.title;
+                if (v.title.length > 20)
+                    title = title.substring(0, 20);
+                div += `
+                <div class="q-item">
+                    <div class="item-header">
+                        <img class="user-avatar" src="image/user_avatar/` + v.user.avatar + `">
+                        <div class="user-info">
+                            <div class="user-name">
+                                ` + v.user.username + `
+                            </div>
+                            <div class="user-industry">
+                                ` + v.user.industry + `
+                            </div>
+                        </div>
+                    </div>
+                    <div onclick="goToQuestion(` + v.questionId + `)" class="item-body">
+                        ` + title + `
+                    </div>
+                </div>
+                `;
+            })
+            $('.main-container-body').html(div);
+        },
+        dataType: 'json'
     })
 }

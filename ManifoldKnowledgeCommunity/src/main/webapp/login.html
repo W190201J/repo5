@@ -109,7 +109,7 @@
                 <button id="registerButton" type="button ">注册</button>
                 <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-----copyright@2019流形-----</h5>
             </div>
-            <div>
+            <div id="login-container">
                 <form id="loginForm">
                     <div class="inputs ">
                         <div class="login-input-email">
@@ -219,6 +219,14 @@
                 });
             });
 
+            /*回车登录*/
+            $('#login-container').bind("keydown", function(e) {
+                var theEvent = e || window.event;
+                var code = theEvent.keyCode || theEvent.which || theEvent.charCode;
+                if (code == 13) {
+                    $('#loginButton').click();
+                }
+            })
 
 
             /* 登录 */

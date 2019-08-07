@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.annotation.Resource;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created by 胥珂铭 on 2019/8/2.
@@ -76,6 +77,24 @@ public class QuestionController {
             question.setQuestionId(-1L);
             return new ResponseEntity<Question>(question, HttpStatus.OK);
         }
+    }
+
+    @GetMapping("/question/pop")
+    public ResponseEntity<?> queryByPop(Integer size){
+        List<Question> questions=questionService.queryByPop(size);
+        return new ResponseEntity<List<Question>>(questions,HttpStatus.OK);
+    }
+
+    @GetMapping("question/key")
+    public ResponseEntity<?> queryByKey(String keyword){
+        List<Question> questions=questionService.queryByKey(keyword);
+        return new ResponseEntity<List<Question>>(questions,HttpStatus.OK);
+    }
+
+    @GetMapping("question/topic")
+    public ResponseEntity<?> queryByTopicId(Long topicId){
+        List<Question> questions=questionService.queryByTopicId(topicId);
+        return new ResponseEntity<List<Question>>(questions,HttpStatus.OK);
     }
 
 }

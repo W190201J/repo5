@@ -6,10 +6,11 @@
     <title>流形--专业、开放的知识分享社区</title>
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="shortcut icon" type="image/jpeg" href="image/manifold-logo5.jpg" />
-    <link rel="stylesheet" type="text/css" href="css/manifold-topic.css">
     <link rel="stylesheet" type="text/css" href="css/my-layer-skin.css">
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/mask.css">
+    <link rel="stylesheet" type="text/css" href="css/topic.css">
     <link href="css/style.css" rel="stylesheet">
-
     <!--jQuery-->
     <script type="text/javascript " src="js/jquery-3.3.1.min.js"></script>
     <!--token服务-->
@@ -29,7 +30,6 @@
                         user_info = data;
                         $('body').css('display', 'block');
                         console.info('检验成功,user_email:' + data.email);
-
                     }
                 },
                 async: 'false',
@@ -38,6 +38,7 @@
         };
         chkToken();
     </script>
+
 </head>
 
 <body style="display: none">
@@ -58,18 +59,19 @@
             </center>
         </div>
     </div>
-    <div>
-        <div class="topic-container">
 
-        </div>
-        <!--所属子问题集合(subset)-->
-        <div class="sub-question-set">
+    <div class="main-container">
+        <div class="sub-main-container">
             <div class="main-container-body">
+                <div class="pop">智能推荐</div>
 
             </div>
+            <div class="main-container-footer">
+                等待加载...
+            </div>
         </div>
-
     </div>
+
     <div class="right-top">
         <li>
             <a href="javascript:openQuestionEdit();">
@@ -88,7 +90,6 @@
             </a>
         </li>
     </div>
-
 
     <div class="right-foot">
         <div class="menu">
@@ -121,43 +122,82 @@
     </div>
 
 
-    <!--base-->
+
+
+    <div class="search-result-container">
+
+    </div>
+
+    <!--基础js-->
+
     <script type="text/javascript " src="js/manifold.js"></script>
     <script type="text/javascript " src="js/question-edit-layer.js"></script>
     <!--layer-->
     <script type="text/javascript " src="layer/2.4/layer.js"></script>
     <!--layui-->
     <script type="text/javascript" src="layui/layui.js"></script>
-    <!--token服务-->
-    <script type="text/javascript " src="js/jwt.js"></script>
     <!--话题树-->
     <script type="text/javascript " src="js/manifold-topic.js"></script>
+
+    <script type="text/javascript " src="js/scroll-event.js"></script>
+
     <script>
-        var fatherTopic = null;
-        var sonTopic = null;
-        var countSon = 0;
         $(function() {
             /*配置layui弹出层自定义样式*/
             layer.config({
                 skin: 'my-layer-skin'
             });
 
-            $('#topic-tree').css({
+
+            $('#discover-page').css({
                 'background-color': '#3498db',
                 'color': '#fff'
+            });
+            console.log(user_info);
+
+            $('#username').html('<i class="fa fa-user-o"></i>' + user_info.username + '<right><img src="image/user_avatar/' + user_info.avatar + '"></right>');
+            loadRecommQues();
+        });
+
+        function loadRecommQues() {
+            $.ajax({
+                url: 'manifold/question/pop',
+                method: 'get',
+                data: {
+                    'size': '5'
+                },
+                success: function(returnData) {
+                    var div = ``;
+                    $.each(returnData, function(i, v) {
+
+                        var title = v.title;
+                        if (v.title.length > 20)
+                            title = title.substring(0, 20);
+                        div += ` <div class="q-item">
+                                    <div class="item-header">
+                                        <img class="user-avatar" src="image/user_avatar/` + v.user.avatar + `">
+                                        <div class="user-info">
+                                            <div class="user-name">
+                                                ` + v.user.username + `
+                                            </div>
+                                            <div class="user-industry">
+                                                ` + v.user.industry + `
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div onclick="goToQuestion(` + v.questionId + `)" class="item-body">
+                                        ` + title + `
+                                    </div>
+                                </div>
+                                `;
+                    })
+                    $('.main-container-body').append(div);
+
+                },
+                dataType: 'json'
             })
-            loadRoot();
-            loadSonTopic(1);
-            setTimeout("arrageSons();", 500);
-
-            $('#username').html('<i class="fa fa-user-o"></i>' + user_info.username + '<img src="image/user_avatar/' + user_info.avatar + '">');
-
-        })
-
-
-        function loadPopQuestion() {
-
         }
+
 
         function search_autocomplete() {
             $('.search-autocomplete').html('');
@@ -178,10 +218,10 @@
                                     str = str.substring(0, 15);
                                 }
                                 div += `
-                <div onclick="goToQuestion('` + v.questionId + `')" class="search-autocomplete-item">
-                    ` + str + `
-                </div>
-                `;
+                        <div onclick="goToQuestion('` + v.questionId + `')" class="search-autocomplete-item">
+                            ` + str + `
+                        </div>
+                        `;
                             })
                             $('.search-autocomplete').html(div);
                         } else {

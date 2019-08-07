@@ -12,9 +12,9 @@ public class Answer implements Serializable {
     private Question question;
     private String content;
     private User user;
-    private Integer agree;
-    private Integer disagree;
-    private Integer readTimes;
+    private Long agree;
+    private Long disagree;
+    private Long readTimes;
 
     public static long getSerialVersionUID() {
         return serialVersionUID;
@@ -52,27 +52,27 @@ public class Answer implements Serializable {
         this.user = user;
     }
 
-    public Integer getAgree() {
+    public Long getAgree() {
         return agree;
     }
 
-    public void setAgree(Integer agree) {
+    public void setAgree(Long agree) {
         this.agree = agree;
     }
 
-    public Integer getDisagree() {
+    public Long getDisagree() {
         return disagree;
     }
 
-    public void setDisagree(Integer disagree) {
+    public void setDisagree(Long disagree) {
         this.disagree = disagree;
     }
 
-    public Integer getReadTimes() {
+    public Long getReadTimes() {
         return readTimes;
     }
 
-    public void setReadTimes(Integer readTimes) {
+    public void setReadTimes(Long readTimes) {
         this.readTimes = readTimes;
     }
 }

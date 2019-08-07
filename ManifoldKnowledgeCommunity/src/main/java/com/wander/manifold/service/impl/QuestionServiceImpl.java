@@ -6,6 +6,8 @@ import com.wander.manifold.service.IQuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * Created by 胥珂铭 on 2019/8/2.
  */
@@ -33,5 +35,21 @@ public class QuestionServiceImpl implements IQuestionService {
     @Override
     public Question queryById(Long questionId) {
         return questionMapper.queryById(questionId);
+    }
+
+    @Override
+    public List<Question> queryByPop(Integer size) {
+        return questionMapper.queryByPop(size);
+    }
+
+    @Override
+    public List<Question> queryByKey(String keyword) {
+        keyword="%"+keyword+"%";
+        return questionMapper.queryByKey(keyword);
+    }
+
+    @Override
+    public List<Question> queryByTopicId(Long topicId) {
+        return questionMapper.queryByTopicId(topicId);
     }
 }

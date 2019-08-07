@@ -48,13 +48,35 @@
             <center>
                 <a id="home-page" href="manifold.html"><i class="fa fa-tv fa-1g"></i>&nbsp;&nbsp;主页</a>
                 <a id="topic-tree" href="topic-tree.html"><i class="fa fa-tree fa-1g"></i>&nbsp;&nbsp;话题树</a>
-                <a id="discover-page" href="#contact"><i class="fa fa-twitch fa-1g"></i>&nbsp;&nbsp;发现</a>&nbsp;&nbsp;
-                <input type="text" placeholder="搜索 问题/话题/用户..">
-                <button id="search-btn"><i class="fa fa-search fa-lg"></i>&nbsp;search</button>
+                <a id="discover-page" href="discover.html"><i class="fa fa-twitch fa-1g"></i>&nbsp;&nbsp;发现</a>&nbsp;&nbsp;
+                <div class="search-input-container">
+                    <input id="search-input" type="text" placeholder="搜索 问题/话题/用户.." onkeyup="search_autocomplete()">
+                    <div class="search-autocomplete">
+
+                    </div>
+                </div>
+                <button id="search-btn" onclik=""><i class="fa fa-search fa-lg"></i>&nbsp;search</button>
             </center>
         </div>
     </div>
 
+    <div class="main-container">
+        <div class="sub-main-container">
+            <div class="main-container-header">
+                <center>
+                    <a id="home-page" href="javascript:loadPopQuestion();">阅读最多</a>
+                    <a id="topic-tree" href="javascript:loadQualityQuestion()">点赞最多</a>
+                </center>
+            </div>
+            <div class="main-container-body">
+
+
+            </div>
+            <div class="main-container-footer">
+
+            </div>
+        </div>
+    </div>
 
     <div class="right-top">
         <li>
@@ -106,7 +128,9 @@
     </div>
 
 
-    <div class="top-question-container">
+
+
+    <div class="search-result-container">
 
     </div>
 
@@ -136,9 +160,137 @@
             console.log(user_info);
 
             $('#username').html('<i class="fa fa-user-o"></i>' + user_info.username + '<right><img src="image/user_avatar/' + user_info.avatar + '"></right>');
+            loadPopQuestion();
 
         });
 
+        function loadPopQuestion() {
+            $.ajax({
+                url: 'manifold/question/pop',
+                method: 'get',
+                data: {
+                    'size': '20'
+                },
+                success: function(returnData) {
+                    var div = `<div class="pop">最新问题</div>`;
+                    $.each(returnData, function(i, v) {
+
+                        var title = v.title;
+                        if (v.title.length > 20)
+                            title = title.substring(0, 20);
+                        div += ` <div class="q-item">
+                                    <div class="item-header">
+                                        <img class="user-avatar" src="image/user_avatar/` + v.user.avatar + `">
+                                        <div class="user-info">
+                                            <div class="user-name">
+                                                ` + v.user.username + `
+                                            </div>
+                                            <div class="user-industry">
+                                                ` + v.user.industry + `
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div onclick="goToQuestion(` + v.questionId + `)" class="item-body">
+                                        ` + title + `
+                                    </div>
+                                </div>
+                                `;
+                    })
+                    $('.main-container-body').html(div);
+
+                },
+                dataType: 'json'
+            })
+        }
+
+        function loadQualityQuestion() {
+            $.ajax({
+                url: 'manifold/question/pop',
+                method: 'get',
+                data: {
+                    'size': '20'
+                },
+                success: function(returnData) {
+                    var div = `<div class="pop">最新问题</div>`;
+                    $.each(returnData, function(i, v) {
+                        var title = v.title;
+                        if (v.title.length > 20)
+                            title = title.substring(0, 20);
+                        div += ` <div class="q-item">
+                                    <div class="item-header">
+                                        <img class="user-avatar" src="image/user_avatar/` + v.user.avatar + `">
+                                        <div class="user-info">
+                                            <div class="user-name">
+                                                ` + v.user.username + `
+                                            </div>
+                                            <div class="user-industry">
+                                                ` + v.user.industry + `
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item-body">
+                                        ` + title + `
+                                    </div>
+                                </div>
+                                `;
+                    })
+                    $('.main-container-body').html(div);
+
+                },
+                dataType: 'json'
+            })
+        }
+
+        function search_autocomplete() {
+            $('.search-autocomplete').html('');
+            var keyword = $('#search-input').val();
+            if (keyword != '') {
+                $.ajax({
+                    url: 'manifold/question/key',
+                    method: 'get',
+                    data: {
+                        'keyword': keyword
+                    },
+                    success: function(returnData) {
+                        if (returnData.length != 0) {
+                            var div = '';
+                            $.each(returnData, function(i, v) {
+                                var str = lightKeyWrod(keyword, v.title);
+                                if (str.length > 15) {
+                                    str = str.substring(0, 15);
+                                }
+                                div += `
+                        <div onclick="goToQuestion('` + v.questionId + `')" class="search-autocomplete-item">
+                            ` + str + `
+                        </div>
+                        `;
+                            })
+                            $('.search-autocomplete').html(div);
+                        } else {
+                            $('.search-autocomplete').css('display', 'none');
+                        }
+
+                    },
+                    dataType: 'json'
+                })
+                $('.search-autocomplete').css('display', 'block');
+            } else {
+                $('.search-autocomplete').css('display', 'none');
+                $('.search-autocomplete').html('');
+            }
+        }
+
+        function goToQuestion(questionId) {
+            window.location.href = "question.html?questionId=" + questionId;
+        }
+
+        function lightKeyWrod(keyword, str) {
+            var reg = new RegExp("(" + keyword + ")", "g");
+            var newstr = str;
+            if (!reg.test(str))
+                newstr = str.replace(reg, "<font color=red>$1</font>");
+            return newstr;
+        }
 
         function logout() {
             layer.confirm("确定要退出吗", () => {
