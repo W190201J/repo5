@@ -21,11 +21,11 @@
 <script type="text/javascript" src="lib/DD_belatedPNG_0.0.8a-min.js" ></script>
 <script>DD_belatedPNG.fix('*');</script>
 <![endif]-->
-    <title>用户列表</title>
+    <title>问题池</title>
 </head>
 
 <body>
-    <nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 用户管理 <span class="c-gray en">&gt;</span> 用户列表 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);"
+    <nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 问题管理 <span class="c-gray en">&gt;</span> 问题库 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);"
             title="刷新"><i class="Hui-iconfont">&#xe68f;</i></a></nav>
     <div class="page-container">
         <div class="mt-20">
@@ -60,15 +60,14 @@
                 tb.render({
                     elem: '#tb',
                     height: 500,
-                    url: '../backuser/blockUser' ,//数据接口
-                    method:'get'
+                    url: '../music' //数据接口
                         ,
                     page: true //开启分页
                         ,
                     limits: [7, 10, 15, 20, 25, 30],
-                    /*where: {
-                        type: 'user_block_list'
-                    },*/
+                    where: {
+                        type: 'music_pool_list'
+                    },
                     request: { //重新定义请求参数,定义过后的结果为:?page=1&pageSize=10
                         pageName: 'page',
                         limitName: 'pageSize'
@@ -80,38 +79,36 @@
                     cols: [
                         [ //表头
                             {
-                                field: 'uid',
-                                title: 'uid',
+                                field: 'mid',
+                                title: 'mid',
                                 sort: true,
                                 fixed: 'left'
                             }, {
-                                field: 'username',
-                                title: '用户名',
+                                field: 'mname',
+                                title: '歌曲名',
                             }, {
-                                field: 'gender',
-                                title: '性别',
-                            templet: function(d) {
-                                if (d.gender == 1)
-                                    return '男';
-                                else if(d.gender==0)
-                                    return '女';
-                                else
-                                    return '';
-                            }
+                                field: 'author',
+                                title: '音乐作者',
                             }, {
-                                field: 'phone',
-                                title: '手机号码',
+                                field: 'style',
+                                title: '曲风',
                                 sort: true
                             }, {
-                                field: 'email',
-                                title: '邮箱地址'
+                                field: 'uploader',
+                                title: '上传者'
+                            }, {
+                                field: 'playtimes',
+                                title: '播放次数'
+                            }, {
+                                field: 'uploaddate',
+                                title: '上传时间'
                             }, {
                                 field: 'status',
-                                title: '账号状态',
-                                templet: '<td class="td-status"><span class="label label-danger radius">已封禁</span></td>'
+                                title: '歌曲状态',
+                                templet: '<td class="td-status"><span class="label label-success radius">在歌曲池中</span></td>'
                             }, {
                                 title: '操作',
-                                templet: '<div><button onclick="renewUser({{d.uid}})" class="layui-btn btn layui-btn-sm layui-btn-radius" type="button"><i class="layui-icon layui-icon-refresh-1"></i>启用</button></div>'
+                                templet: '<div><button onclick="delMusic({{d.mid}})" class="layui-btn btn layui-btn-sm layui-btn-radius layui-btn-danger" type="button"><i class="layui-icon layui-icon-delete"></i>删除</button></div>'
                             }
                         ]
                     ]
@@ -121,19 +118,19 @@
         }
 
 
-
-        function renewUser(uid) {
-            layer.confirm('确认要恢复吗？', function(index) {
+        /*音乐-删除*/
+        function delMusic(mid) {
+            layer.confirm('确认要删除吗？', function(index) {
                 $.ajax({
-                    type: 'PUT',
-                    url: '../backuser/blockUser',
+                    type: 'POST',
+                    url: '../music',
                     data: {
-
-                        'uid': uid
+                        'type': 'del_music',
+                        'mid': mid
                     },
                     success: function(returndata) {
-                        if (returndata >0) {
-                            layer.msg('恢复成功', {
+                        if (returndata == 'ok') {
+                            layer.msg('删除成功', {
                                 time: 1000,
                                 icon: 1
                             }, function() {

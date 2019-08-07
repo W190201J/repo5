@@ -60,14 +60,14 @@
                 tb.render({
                     elem: '#tb',
                     height: 500,
-                    url: '../user' //数据接口
+                    url: '../backuser/backUser' //数据接口
                         ,
                     page: true //开启分页
                         ,
                     limits: [7, 10, 15, 20, 25, 30],
-                    where: {
+                 /*   where: {
                         type: 'user_list'
-                    },
+                    },*/
                     request: { //重新定义请求参数,定义过后的结果为:?page=1&pageSize=10
                         pageName: 'page',
                         limitName: 'pageSize'
@@ -84,11 +84,19 @@
                                 sort: true,
                                 fixed: 'left'
                             }, {
-                                field: 'uname',
+                                field: 'username',
                                 title: '用户名',
                             }, {
-                                field: 'sex',
+                                field: 'gender',
                                 title: '性别',
+                            templet: function(d) {
+                                if (d.gender == 1)
+                                    return '男';
+                                else if(d.gender==0)
+                                    return '女';
+                                else
+                                    return '';
+                            }
                             }, {
                                 field: 'phone',
                                 title: '手机号码',
@@ -116,14 +124,13 @@
         function delUser(uid) {
             layer.confirm('确认要封禁吗？', function(index) {
                 $.ajax({
-                    type: 'POST',
-                    url: '../user',
+                    type: 'put',
+                    url: '../backuser/backUser',
                     data: {
-                        'type': 'block_user',
                         'uid': uid
                     },
                     success: function(returndata) {
-                        if (returndata == 'ok') {
+                        if (returndata>0) {
                             layer.msg('封禁成功', {
                                 time: 1000,
                                 icon: 1
