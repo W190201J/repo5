@@ -161,10 +161,10 @@
 
         function loadRecommQues() {
             $.ajax({
-                url: 'manifold/question/pop',
+                url: 'manifold/user/prefer',
                 method: 'get',
                 data: {
-                    'size': '10'
+                    'uid': user_info.uid
                 },
                 success: function(returnData) {
                     var div = ``;

@@ -49,8 +49,8 @@ public class MailUtil {
         //message.setText("这是一封激活邮件，请<a href='#'>点击</a>");
         //192.168.43.213-手机ip
         //-家里ip
-        String emailMsg = "<html><head></head><body><h1>流形问答社区-邮箱验证</h1><h3>请点击下面的链接验证</h3><h5><a href='http://192.168.43.213:8080/activation?code="
-                + code + "'>http://192.168.43.213:8080/activation?code=" + code + "</a></h5></body></html>";
+        String emailMsg = "<html><head></head><body><h1>流形问答社区-邮箱验证</h1><h3>请点击下面的链接验证</h3><h5><a href='http://localhost:8080/activation?code="
+                + code + "'>http://localhost:8080/activation?code=" + code + "</a></h5></body></html>";
         //设置邮件内容
         message.setContent(emailMsg, "text/html;charset=utf-8");
 

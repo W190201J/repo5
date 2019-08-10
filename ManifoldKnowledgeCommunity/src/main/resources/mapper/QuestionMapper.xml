@@ -62,4 +62,13 @@
         select a.*,b.username,b.avatar,b.industry FROM question_table a,user_table b WHERE a.uid=b.uid order by create_time desc limit 0,20;
     </select>
 
+    <select id="queryRandomByTopicId" resultMap="questionMap">
+        select tb.* from
+        (SELECT b.* FROM
+        (SELECT question_id FROM topic_question_rela_table WHERE topic_id=#{arg0}) a,
+        (SELECT a.*,b.username,b.avatar,b.industry FROM question_table a,user_table b WHERE a.uid=b.uid) b
+        WHERE a.question_id=b.question_id) tb
+        order by rand( ) limit 1;
+    </select>
+
 </mapper>

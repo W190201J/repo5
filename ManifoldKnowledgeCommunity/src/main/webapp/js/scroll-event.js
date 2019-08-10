@@ -46,10 +46,12 @@ function getScrollHeight() {
 然后调用ajax处理函数异步加载数据
 */
 window.onscroll = function() {
+    console.log(getScrollHeight() + ',' + getWindowHeight() + getDocumentTop());
     //监听事件内容
-    if (getScrollHeight() == getWindowHeight() + getDocumentTop()) {
+    if (getScrollHeight() <= getWindowHeight() + getDocumentTop()) {
         //当滚动条到底时,这里是触发内容
         //异步请求数据,局部刷新dom
+        console.log('wow');
         loadRecommQues();
     }
 }

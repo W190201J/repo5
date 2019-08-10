@@ -26,5 +26,8 @@
         update preference_table set preference_table.`value`=preference_table.`value`+'1' where uid=#{uid} and topic_id=#{topicId}
     </update>
 
+    <select id="queryByUid" resultMap="preferMap">
+        select * from preference_table where uid=#{arg0}
+    </select>
 
 </mapper>

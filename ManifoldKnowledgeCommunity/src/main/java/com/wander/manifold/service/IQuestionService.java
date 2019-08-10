@@ -25,4 +25,5 @@ public interface IQuestionService {
 
     List<Question> queryByTime();
 
+    Question queryRandomByTopicId(Long topicId);
 }

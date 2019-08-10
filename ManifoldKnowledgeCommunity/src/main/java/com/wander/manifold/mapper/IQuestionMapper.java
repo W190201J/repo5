@@ -28,4 +28,6 @@ public interface IQuestionMapper {
 
     List<Question> queryByTime();
 
+    Question queryRandomByTopicId(Long topicId);
+
 }

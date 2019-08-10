@@ -57,4 +57,9 @@ public class QuestionServiceImpl implements IQuestionService {
     public List<Question> queryByTime() {
         return questionMapper.queryByTime();
     }
+
+    @Override
+    public Question queryRandomByTopicId(Long topicId) {
+        return questionMapper.queryRandomByTopicId(topicId);
+    }
 }
