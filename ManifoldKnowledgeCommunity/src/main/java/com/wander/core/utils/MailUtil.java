@@ -27,12 +27,11 @@ public class MailUtil {
         props.put("mail.smtp.ssl.enable", "true");
         props.put("mail.smtp.ssl.socketFactory", msf);
 
-
         // 创建验证器
         Authenticator auth = new Authenticator() {
             public PasswordAuthentication getPasswordAuthentication() {
                 //设置发送人的帐号和密码
-                return new PasswordAuthentication("keming_xu@163.com", "w190201j");
+                return new PasswordAuthentication("keming_xu@163.com", "xukeming123");
             }
         };
 
@@ -40,10 +39,8 @@ public class MailUtil {
 
         // 2.创建一个Message，它相当于是邮件内容
         Message message = new MimeMessage(session);
-
         //设置发送者
         message.setFrom(new InternetAddress("keming_xu@163.com"));
-
         //设置发送方式与接收者
         message.setRecipient(Message.RecipientType.TO, new InternetAddress(email));
 
@@ -52,8 +49,8 @@ public class MailUtil {
         //message.setText("这是一封激活邮件，请<a href='#'>点击</a>");
         //192.168.43.213-手机ip
         //-家里ip
-        String emailMsg = "<html><head></head><body><h1>流形问答社区-邮箱验证</h1><h3>请点击下面的链接验证</h3><h5><a href='http://192.168.43.213:8080/activation?code="
-                + code + "'>http://192.168.43.213:8080/activation?code=" + code + "</a></h5></body></html>";
+        String emailMsg = "<html><head></head><body><h1>流形问答社区-邮箱验证</h1><h3>请点击下面的链接验证</h3><h5><a href='http://localhost:8080/activation?code="
+                + code + "'>http://localhost:8080/activation?code=" + code + "</a></h5></body></html>";
         //设置邮件内容
         message.setContent(emailMsg, "text/html;charset=utf-8");
 

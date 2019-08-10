@@ -43,4 +43,17 @@ public class TopicController {
         return new ResponseEntity<Topic>(ancestor,HttpStatus.OK);
     }
 
+    @GetMapping("/topic/keyword")
+    public ResponseEntity<?> queryTopicByKeyword(String keyword){
+        List<Topic> topics=topicService.queryTopicByKeyword(keyword);
+        return new ResponseEntity<List<Topic>>(topics,HttpStatus.OK);
+    }
+
+    @GetMapping("/topic/questionId")
+    public ResponseEntity<?> queryTopicIdByQuestionId(Long questionId){
+        List<Long> topicIds=topicService.queryTopicIdByQuestionId(questionId);
+        return new ResponseEntity<List<Long>>(topicIds,HttpStatus.OK);
+    }
+
+
 }

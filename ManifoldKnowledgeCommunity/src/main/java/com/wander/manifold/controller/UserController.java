@@ -13,10 +13,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.Date;
@@ -59,9 +56,9 @@ public class UserController {
             String token = jwtTokenUtil.createJwt(user);
             log.info("用户" + email + "生成的token信息:{}", token);
             return new ResponseEntity<String>(token, HttpStatus.OK);
-        } else if(user != null && user.getStatus() == 0) {
+        } else if (user != null && user.getStatus() == 0) {
             return new ResponseEntity<Integer>(0, HttpStatus.OK);
-        }else{
+        } else {
             return new ResponseEntity<Integer>(1, HttpStatus.OK);
         }
     }
@@ -81,7 +78,6 @@ public class UserController {
         user.setUsername(username);
         user.setPassword(password);
         user.setJoinTime(new Date());
-
         //生成随机数
         String userCode = String.valueOf((int) (Math.random() * 100000));
         //保存激活码到Redis，有效时间30分钟--测试阶段设置为3分钟
@@ -89,7 +85,6 @@ public class UserController {
         value.set(user.getEmail(), userCode, 3, TimeUnit.MINUTES);
         //user对象暂时保存到Redis，失效时间30分钟--测试阶段设置为3分钟
         value.set(user.getEmail() + "_info", user, 3, TimeUnit.MINUTES);
-
         String activationCode = KemingCodeUtil.encode(user.getEmail() + "#div#" + userCode, kmSecretKey);
 
         try {
@@ -99,6 +94,30 @@ public class UserController {
         }
 
         return new ResponseEntity<String>(user.getEmail(), HttpStatus.OK);
+    }
+
+    @GetMapping("/user/querybyid")
+    public ResponseEntity<?> queryById(Long uid) {
+        User user = userService.queryById(uid);
+        if (user != null)
+            return new ResponseEntity<User>(user, HttpStatus.OK);
+        else {
+            user.setUid(-1L);
+            return new ResponseEntity<User>(user, HttpStatus.OK);
+        }
+
+    }
+
+    @PutMapping("/user/update")
+    public ResponseEntity<?> update(Long uid,String username, Integer gender, String avatar, String phone, String industry, String education) {
+        Integer res = userService.update(uid,username, gender, avatar, phone, industry, education);
+        return new ResponseEntity<Integer>(res, HttpStatus.OK);
+    }
+
+    @PostMapping("/user/follow")
+    public ResponseEntity<?> followAction(Long followed,Long follower){
+        Integer res=userService.followAction(followed,follower);
+        return new ResponseEntity<Integer>(res,HttpStatus.OK);
     }
 
 }

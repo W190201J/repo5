@@ -40,4 +40,18 @@
         update user_table set status=1 where email=#{email};
     </update>
 
+    <select id="queryById" resultMap="userMap">
+        select * from user_table where uid=#{arg0}
+    </select>
+
+    <update id="update">
+        update user_table
+        set username=#{username},avatar=#{avatar},gender=#{gender},phone=#{phone},industry=#{industry},education=#{education}
+        where uid=#{uid};
+    </update>
+
+    <insert id="followAction" parameterType="java.lang.Long">
+        insert into follow_rela_table(followed,follower) values(#{followed},#{follower})
+    </insert>
+
 </mapper>

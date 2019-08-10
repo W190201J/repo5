@@ -26,4 +26,19 @@ public class UserServiceImpl implements IUserService {
     public Integer addUser(User user) {
         return userMapper.insert(user);
     }
+
+    @Override
+    public User queryById(Long uid) {
+        return userMapper.queryById(uid);
+    }
+
+    @Override
+    public Integer update(Long uid,String username, Integer gender, String avatar, String phone, String industry, String education) {
+        return userMapper.update(uid,username,gender,avatar,phone,industry,education);
+    }
+
+    @Override
+    public Integer followAction(Long followed, Long follower) {
+        return userMapper.followAction(followed,follower);
+    }
 }

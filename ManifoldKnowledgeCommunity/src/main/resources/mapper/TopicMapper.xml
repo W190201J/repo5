@@ -30,9 +30,17 @@
         select * from topic_table where father_topic=#{arg0}
     </select>
 
+    <select id="queryTopicByKeyword" resultMap="topicMap">
+        select * from topic_table where topic_table.`name` like #{arg0};
+    </select>
+
     <insert id="insert" parameterType="Topic">
         INSERT INTO topic_table(name,topic_desc,father_topic,create_time)
         VALUES(#{name},#{topicDesc},#{fatherTopic},#{createTime})
     </insert>
+
+    <select id="queryTopicIdByQuestionId" resultType="java.lang.Long">
+       select topic_id from topic_question_rela_table where question_id=#{arg0}
+    </select>
 
 </mapper>
